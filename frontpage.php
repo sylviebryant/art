@@ -28,12 +28,12 @@
 	
 	
 	<div class="banner"></div>
-	<?php
+<!--	<?php
 		include("menu.php");
 	?>
-			
+-->		
 	<div class="box box1">
-	<a href="order.php" data-role="button">Create</a>
+	<a href="pick.php" data-role="button">Create</a>
 </div>
 	
 </div><!-- /page -->
