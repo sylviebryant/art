@@ -23,7 +23,7 @@
 	<input type="submit" value="Save" />
 	<a href="printpage.php" data-role="button">Print</a>
 	<a href="share-page.php" data-role="button">Share</a>
-	<a href="index.html" data-role="button" data-inline="true" data-theme="a">Back</a>
+	<a href="mashup.php" data-role="button" data-inline="true" data-theme="a">Back</a>
 	<a href="frontpage.php" data-role="button" data-inline="true">Done</a>
 
 
