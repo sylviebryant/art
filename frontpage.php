@@ -19,6 +19,14 @@
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div><!-- /content -->
 	
+	<div data-role="navbar">
+	<ul>
+		<li><a href="a.html" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="gallery.php">Gallery</a></li>
+	</ul>
+</div><!-- /navbar -->
+	
+	
 	<div class="banner"></div>
 	<?php
 		include("menu.php");
