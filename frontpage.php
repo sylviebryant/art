@@ -21,7 +21,7 @@
 	
 	<div data-role="navbar">
 	<ul>
-		<li><a href="pick.php" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="index2.php" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
 </div><!-- /navbar -->
@@ -33,7 +33,7 @@
 	?>
 -->		
 	<div class="box box1">
-	<a href="pick.php" data-role="button">Create</a>
+	<a href="index2.php" data-role="button">Create</a>
 </div>
 	
 </div><!-- /page -->
