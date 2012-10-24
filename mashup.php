@@ -1,7 +1,10 @@
 <div class="backbutton">
-	<a href="index.php" data-rel="back" class="backbutton">Back</a>
+	<a href="index2.php" data-rel="back" class="backbutton">Back</a>
 	<a href="home.php" class="homebutton">Home</a>
+	<a href="final-edit.php" class="confirmbutton">Confirm</a>
 </div>
+<p>This page generates the mashup</p>
+<p>As for now, regenerate is not present since it doesn't do anything</p>	
 <div class="pretty">
 <a href="selection.php">
 <img width="140" height="140" src='photo1.png'/>
