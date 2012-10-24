@@ -21,19 +21,19 @@
 	
 	<div data-role="navbar">
 	<ul>
-		<li><a href="a.html" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="pick.php" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
 </div><!-- /navbar -->
 	
 	
 	<div class="banner"></div>
-	<?php
+<!--	<?php
 		include("menu.php");
 	?>
-			
+-->		
 	<div class="box box1">
-	<a href="order.php" data-role="button">Create</a>
+	<a href="pick.php" data-role="button">Create</a>
 </div>
 	
 </div><!-- /page -->
