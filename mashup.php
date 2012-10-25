@@ -4,7 +4,7 @@
 	<a href="final-edit.php" class="confirmbutton">Confirm</a>
 </div>
 <p>This page generates the mashup</p>
-<p>As for now, regenerate is not present since it doesn't do anything</p>	
+<p>Now, regenerate is not present since it doesn't work</p>	
 <div class="pretty">
 <a href="selection.php">
 <img width="140" height="140" src='photo1.png'/>
