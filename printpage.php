@@ -18,6 +18,7 @@
 	<div data-role="content">	
 		<p>this page connects the device to the printer and prints out the painting</p>		
 	</div><!-- /content -->
+	<a href="final-edit.php" data-role="button" data-inline="true" data-theme="c">Back</a>
 	<a href="final-edit.php" data-role="button" data-inline="true" data-theme="c">Done</a>
 
 </div><!-- /page -->
