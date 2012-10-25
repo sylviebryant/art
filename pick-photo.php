@@ -11,7 +11,7 @@
 </head> 
 
 <body> 
-<a href="index.php" data-role="button" data-mini="true" width="50">Back</a>
+<a href="index.php" data-role="button" data-inline="true">Back</a>
 <div data-role="controlgroup" data-type="horizontal">
 <a href="takephoto.php" data-role="button">Pick Photo 1</a>
 <a href="takephoto.php" data-role="button">Pick Photo 2</a>
