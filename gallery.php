@@ -19,7 +19,7 @@
 		<p>shows previous mashed up paintings</p>		
 	</div><!-- /content -->
 	
-	<a href="frontpage.php" data-role="button" data-theme="a">Back</a>
+	<a href="index.php" data-role="button" data-theme="a">Back</a>
 
 </div><!-- /page -->
 
