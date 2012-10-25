@@ -21,7 +21,7 @@
 		<p>choose photos from camera</p>
 		<p>search photo online</p>	
 	</div><!-- /content -->
-	<a href="index2.php" data-role="button" data-inline="true" data-theme="a">Back</a>
+	<a href="pick-photo.php" data-role="button" data-inline="true" data-theme="a">Back</a>
 
 </div><!-- /page -->
 

@@ -21,7 +21,7 @@
 	
 	<div data-role="navbar">
 	<ul>
-		<li><a href="index2.php" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="pick-photo.php" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
 </div><!-- /navbar -->
