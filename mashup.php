@@ -13,8 +13,6 @@
 <body> 
 
 <a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
-
-</div>
 <p>This page generates the mashup</p>
 <p>You will later be able to select a photo, but now just press confirm to move on</p>
 <p>Also, regenerate is not present since it doesn't work</p>
@@ -22,5 +20,6 @@
 <img src='light-dots.png' width="200" height="200"/>
 <img src='water.png' width="200" height="200" />
 <a href="filter.php" data-role="button" data-inline="true" data-align="right">Confirm</a>
+</div>
 </body>
 </html>
