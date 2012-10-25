@@ -1,6 +1,6 @@
 <div class="backbutton">
-	<a href="index2.php" data-rel="back" class="backbutton">Back</a>
-	<a href="frontpage.php" class="homebutton">Home</a>
+	<a href="pick-photo.php" data-rel="back" class="backbutton">Back</a>
+	<a href="index.php" class="homebutton">Home</a>
 	<a href="final-edit.php" class="confirmbutton">Confirm</a>
 </div>
 <p>This page generates the mashup</p>
