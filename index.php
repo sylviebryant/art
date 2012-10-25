@@ -1,41 +1,32 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Maya Online Books</title>
-		<link rel="apple-touch-icon" href="appicon.png" />
-		<link rel="apple-touch-startup-image" href="startup.png">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="viewport" content="width=device-width, user-scalable=no" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-		<link href="style.css" rel="stylesheet" type="text/css">
-	</head>
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Mash Photato</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+<body> 
 
-	<body>
-	
-		<div class="banner"></div>
-		<?php
-		include("menu.php");
-		?>
-		
-		<table>
-		<?php
-			include("config.php");
-			$query = "SELECT * FROM books";
-			$result = mysql_query($query);
-			while ($row = mysql_fetch_assoc($result)) {
-				echo "<tr><td><h2>".$row["title"]."</h2>";
-				echo "<p class='author'>".$row["author"]."</p>";
-				echo "<td><img width='100' class='pretty' src='".$row["image"]."' /></td></td>";
-			} 
-			?>
-		</table>
-		
-		<script type="text/javascript">
-		$("a").click(function (event) {
-		    event.preventDefault();
-		    window.location = $(this).attr("href");
-		});
-		</script>
-	</body>
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Mash Photato</h1>
+	</div><!-- /header -->
+	
+	<div data-role="content">	
+		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
+	</div><!-- /content -->
+	
+	<div data-role="navbar">
+	<ul>
+		<li><a href="index2.php" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="gallery.php">Gallery</a></li>
+	</ul>
+</div><!-- /navbar -->
+	
+</div><!-- /page -->
+
+</body>
 </html>
