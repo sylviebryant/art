@@ -9,10 +9,13 @@
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head> 
-
+<div data-role="page>
 <body> 
+	<div data-role="header">
+		<h1>Mashups</h1>
+		<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
+	</div><!-- /header -->
 
-<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
 <p>This page generates the mashup</p>
 <p>You will later be able to select a photo, but now just press confirm to move on</p>
 <p>Also, regenerate is not present since it doesn't work</p>
