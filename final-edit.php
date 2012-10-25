@@ -19,12 +19,13 @@
 		<p>This page saves, prints and shares the painting</p>		
 	</div><!-- /content -->
 
-	
+	<p>This save button will generate pop up message</p>
+	<p>As of now "Save" doesn't do anything</p>
 	<input type="submit" value="Save" />
 	<a href="printpage.php" data-role="button">Print</a>
 	<a href="share-page.php" data-role="button">Share</a>
-	<a href="mashup.php" data-role="button" data-inline="true" data-theme="a">Back</a>
-	<a href="frontpage.php" data-role="button" data-inline="true">Done</a>
+	<a href="filter.php" data-role="button" data-inline="true" data-theme="a">Back</a>
+	<a href="index.php" data-role="button" data-inline="true">Done</a>
 
 
 </div><!-- /page -->

@@ -24,7 +24,7 @@
 	<label><input type="checkbox" name="checkbox-0" data-role="controlgroup" data-theme="b"/> Instagram </label>
 	
 	<a href="final-edit.php" data-role="button" data-inline="true" data-theme="a">Back</a>
-	<a href="frontpage.php" data-role="button" data-inline="true" data-theme="c">Confirm</a>
+	<a href="index.php" data-role="button" data-inline="true" data-theme="c">Confirm</a>
 
 </div><!-- /page -->
 
