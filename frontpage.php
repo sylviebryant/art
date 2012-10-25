@@ -26,16 +26,6 @@
 	</ul>
 </div><!-- /navbar -->
 	
-	
-	<div class="banner"></div>
-<!--	<?php
-		include("menu.php");
-	?>
--->		
-	<div class="box box1">
-	<a href="index2.php" data-role="button">Create</a>
-</div>
-	
 </div><!-- /page -->
 
 </body>
