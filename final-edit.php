@@ -12,6 +12,7 @@
 <div data-role="page">
 
 	<div data-role="header">
+		<a href="filter.php" data-role="button" data-inline="true">Back</a>
 		<h1>Almost done!</h1>
 	</div><!-- /header -->
 

@@ -12,6 +12,8 @@
 <div data-role="page">
 
 	<div data-role="header">
+			<a href="mashup.php" data-role="button" data-inline="true">Back</a>
+
 		<h1>Filter</h1>
 	</div><!-- /header -->
 	
@@ -22,13 +24,8 @@
 	<div class="photo">
 	<img width='300' height='300' class='pretty' src='photo1.png' />
 	<div class="coda">Edit options go here</div>
-	
-	<div data-role="navbar">
-	<ul>
-		<li><a href="mashup.php" class="ui-btn-active ui-state-persist">Back</a></li>
-		<li><a href="final-edit.php">Confirm</a></li>
-	</ul>
-</div><!-- /navbar -->
+
+<a href="final-edit.php" data-role="button" data-inline="true" float="right" data-align="right">Confirm</a>
 	
 </div><!-- /page -->
 

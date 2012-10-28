@@ -12,6 +12,7 @@
 <div data-role="page">
 
 	<div data-role="header">
+	<a href="index.php" data-role="button" data-inline="true">Back</a>
 		<h1>Gallery</h1>
 	</div><!-- /header -->
 
@@ -19,7 +20,7 @@
 		<p>shows previous mashed up paintings</p>		
 	</div><!-- /content -->
 	
-	<a href="index.php" data-role="button" data-theme="a">Back</a>
+	
 
 </div><!-- /page -->
 

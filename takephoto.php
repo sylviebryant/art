@@ -12,6 +12,8 @@
 <div data-role="page">
 
 	<div data-role="header">
+		<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
+
 		<h1>Take Your Photo</h1>
 	</div><!-- /header -->
 
@@ -21,7 +23,6 @@
 		<p>choose photos from camera</p>
 		<p>search photo online</p>	
 	</div><!-- /content -->
-	<a href="pick-photo.php" data-role="button" data-inline="true" data-theme="a">Back</a>
 
 </div><!-- /page -->
 
