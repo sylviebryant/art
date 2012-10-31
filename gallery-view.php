@@ -12,14 +12,9 @@
 <div data-role="page>
 <body> 
 	<div data-role="header">
-		<h1>Pick Photos</h1>
+		<h1>Gallery</h1>
 		<a href="index.php" data-role="button" data-inline="true">Back</a>
 	</div><!-- /header -->
-<div data-role="controlgroup" data-type="horizontal">
-<a href="takephoto.php" data-role="button" data-inline="false">Pick Photo 1</a>
-<a href="takephoto.php" data-role="button" data-inline="false">Pick Photo 2</a>
-</div>
-<a href="preview.php" data-role="button">Preview</a>
 </div>
 </body>
 </html>
