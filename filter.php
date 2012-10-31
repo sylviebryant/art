@@ -22,7 +22,7 @@
 	</div><!-- /content -->
 
 	<div class="photo">
-	<img width='300' height='300' class='pretty' src='photo1.png' />
+	<img width='100%' class='pretty' src='mashup1.png' />
 	<div class="coda">Edit options go here</div>
 
 <a href="final-edit.php" data-role="button" data-inline="true" float="right" data-align="right">Confirm</a>
