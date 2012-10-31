@@ -24,7 +24,7 @@
 	<p>As of now "Save" doesn't do anything</p>
 	<input type="submit" value="Save" />
 	<a href="printpage.php" data-role="button">Print</a>
-	<a href="share-page.php" data-role="button">Share</a>
+	<a href="facebook.html" data-role="button">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>
 
 

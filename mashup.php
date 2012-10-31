@@ -11,7 +11,7 @@
 <div data-role="page>
 <body> 
 	<div data-role="header">
-				<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
+				<a href="photopreview.php" data-role="button" data-inline="true">Back</a>
 				<h1>Mashups</h1>
 
 	</div><!-- /header -->
