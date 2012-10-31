@@ -12,7 +12,6 @@
 <div data-role="page">
 
 	<div data-role="header">
-	<a href="final-edit.php" data-role="button" data-inline="true">Back</a>
 		<h1>Share</h1>
 	</div><!-- /header -->
 
@@ -23,8 +22,9 @@
 	<label><input type="checkbox" name="checkbox-0" data-role="controlgroup" data-theme="b"/> Facebook </label>
 	<label><input type="checkbox" name="checkbox-0" data-role="controlgroup" data-theme="b"/> Twitter </label>
 	<label><input type="checkbox" name="checkbox-0" data-role="controlgroup" data-theme="b"/> Instagram </label>
-
-	<a href="final-edit.php" data-role="button" data-inline="true" data-theme="c">Confirm</a>
+	
+	<a href="final-edit.php" data-role="button" data-inline="true" data-theme="a">Back</a>
+	<a href="facebook.html" data-role="button" data-inline="true" data-theme="c">Confirm</a>
 
 </div><!-- /page -->
 

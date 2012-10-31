@@ -14,7 +14,7 @@
 <body> 
 	<div data-role="header">
 		<h1>Mashups</h1>
-		<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
+		<a href="photopreview.php" data-role="button" data-inline="true">Back</a>
 	</div><!-- /header -->
 
 <p>This page generates the mashup</p>
