@@ -17,9 +17,16 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-<div data-role="content">
-	<img src='images/mashup1.jpg' width="600px" max-width="100%"/>
-	<img src='images/mashup2.jpg' width="600px" max-width="100%" />
+
+		<?php
+			include("config.php");
+			$query = "SELECT * FROM gallery where 1";
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_assoc($result)) {
+				echo "<tr><td><h2>".$row["title"]."</h2>";
+			} 
+?>
+
 </div>	
 	</div><!-- /content -->
 	

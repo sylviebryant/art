@@ -9,21 +9,29 @@
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head> 
 <body> 
+<?php
+include("config2.php");
+?>
 
 <div data-role="page">
 
 	<div data-role="header">
 			<a href="mashup.php" data-role="button" data-inline="true">Back</a>
 
-		<h1>Saved</h1>
+		<h1>Save</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	
-		<p>This page lets you select your own filter</p>		
-	</div><!-- /content -->
+<FORM action="testimage1.php" method="post">
+                 <div style="font:bold 10px arial,serif;" >Product Name*</div>
+                 <input type="text" name="myuserName" maxlength="50" /><br />
+                  <div style="font:bold 10px arial,serif;" >Upload a photo</div>
+                 <input name="uploadimage" type="file" /></br>
+                 <div style="font:bold 10px arial,serif;">Product Description:</div> <input type="text" name="product" value=""></br>
+                 <input id="submit" type="submit" value="submit" /><br />
+                 </form>	</div><!-- /content -->
 
 
-<img width="50%" src='images/mashup1.jpg'/>
 <a href="final-edit.php" data-role="button" data-inline="true" float="right" data-align="right">Confirm</a>
 	
 </div><!-- /page -->
