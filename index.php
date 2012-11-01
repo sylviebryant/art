@@ -1,3 +1,10 @@
+<?php
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: login.php");
+	}
+?>
+
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -12,10 +19,14 @@
 <div data-role="page">
 
 	<div data-role="header">
+		<a href="login.php" data-role="button" data-inline="true">Login as a Different User</a>
 		<h1>Mash Photato</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	
+<?php
+	echo "<p>Hi ".$_SESSION['id'].",</p>";
+?>
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div><!-- /content -->
 	
