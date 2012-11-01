@@ -22,12 +22,10 @@ include("config2.php");
 	</div><!-- /header -->
 	
 	<div data-role="content">	
-<FORM action="testimage1.php" method="post">
-                 <div style="font:bold 10px arial,serif;" >Product Name*</div>
-                 <input type="text" name="myuserName" maxlength="50" /><br />
-                  <div style="font:bold 10px arial,serif;" >Upload a photo</div>
-                 <input name="uploadimage" type="file" /></br>
-                 <div style="font:bold 10px arial,serif;">Product Description:</div> <input type="text" name="product" value=""></br>
+<FORM action="save1.php" method="post">
+                 <div style="font:bold 10px arial,serif;" >Title</div>
+                 <input type="text" name="title" maxlength="30" /><br />
+ <input type="hidden" name="urltoimage" value="images/mashup1.jpg" /><br />
                  <input id="submit" type="submit" value="submit" /><br />
                  </form>	</div><!-- /content -->
 

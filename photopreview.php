@@ -18,7 +18,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-	<p> click on the photo you want to change</p>
+	<p> Click on the photo you want to change</p>
 	<div style="width:830px; background-color:white; height:120px;">
 		<div style="width: 2000px; height: 90px;">
 			<a href="takephoto1.html" data-role="image" data-inline="true" rel="external"><img src="upload/image1.jpg" width="120" height="100" />
