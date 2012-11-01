@@ -12,7 +12,7 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<a href="filter.php" data-role="button" data-inline="true">Back</a>
+		<a data-ref="back" data-role="button" data-inline="true">Back</a>
 		<h1>Almost done!</h1>
 	</div><!-- /header -->
 
@@ -22,7 +22,7 @@
 
 	<p>This save button will generate pop up message</p>
 	<p>As of now "Save" doesn't do anything</p>
-	<input type="submit" value="Save" />
+	<a href="gallery.php" data-role="button">Save</a>
 	<a href="printpage.php" data-role="button">Print</a>
 	<a href="facebook.html" data-role="button">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>

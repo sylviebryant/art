@@ -16,20 +16,19 @@
 
 	</div><!-- /header -->
 
-<p>This page generates the mashup</p>
-<p>You will later be able to select a photo, but now just press confirm to move on</p>
-<p>Also, regenerate is not present since it doesn't work</p>
+<p>Select the photo the mashup that you like best:</p>
 <div class="ui-grid-a" margin-right="20px">
-	<div class="ui-block-a"><img width="100%" src='images/mashup1.jpg'/></div>
-	<div class="ui-block-b"><img width="100%" src='images/mashup2.jpg'/></div>
-	<div class="ui-block-a"><img width="100%" src='images/mashup3.jpg'/></div>
-	<div class="ui-block-b"><img width="100%" src='images/mashup4.jpg'/></div>
+	<div class="ui-block-a">
+	<a href="filter.php">
+		<img width="100%" src='images/mashup1.jpg' opacity="20%"/>
+		</a></div>
+	<div class="ui-block-b">
+	<a href="filter2.php"><img width="100%" src='images/mashup2.jpg'/></a></div>
+	<div class="ui-block-a"><a href="filter3.php"><img width="100%" src='images/mashup3.jpg'/></a></div>
+	<div class="ui-block-b"><a href="filter4.php"><img width="100%" src='images/mashup4.jpg'/></a></div>
 </div>
 
-<p>
-<p></p>
-<p><a href="filter.php" data-role="button" data-inline="true" data-align="right">Confirm</a></p>
 </div>
-
+</div>
 </body>
 </html>

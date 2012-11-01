@@ -21,10 +21,7 @@
 		<p>This page lets you select your own filter</p>		
 	</div><!-- /content -->
 
-	<div class="photo">
-	<img width='100%' class='pretty' src='mashup1.png' />
-	<div class="coda">Edit options go here</div>
-
+<img width="100%" src='images/mashup1.jpg'/>
 <a href="final-edit.php" data-role="button" data-inline="true" float="right" data-align="right">Confirm</a>
 	
 </div><!-- /page -->

@@ -17,7 +17,10 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<p>shows previous mashed up paintings</p>		
+<div data-role="content">
+	<img src='images/mashup1.jpg' width="600px" max-width="100%"/>
+	<img src='images/mashup2.jpg' width="600px" max-width="100%" />
+</div>	
 	</div><!-- /content -->
 	
 	
