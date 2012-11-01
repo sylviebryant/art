@@ -24,7 +24,7 @@
 	<p>As of now "Save" doesn't do anything</p>
 	<a href="gallery.php" data-role="button">Save</a>
 	<a href="printpage.php" data-role="button">Print</a>
-	<a href="facebook.html" data-role="button">Share on Facebook</a>
+	<a href="facebook.html" data-role="button" rel = "external">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>
 
 
