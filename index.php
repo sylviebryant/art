@@ -1,3 +1,10 @@
+<?php
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: login.php");
+	}
+?>
+
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -16,6 +23,9 @@
 	</div><!-- /header -->
 	
 	<div data-role="content">	
+<?php
+	echo "<p>Hi ".$_SESSION['id'].",</p>";
+?>
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div><!-- /content -->
 	
