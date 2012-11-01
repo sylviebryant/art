@@ -9,8 +9,20 @@
 </head> 
 <body> 
 
-<div data-role="page">
 
+<?php
+
+ $myFile1 = "upload/image1.jpg";
+ unlink($myFile1);
+ $myFile2 = "upload/image2.jpg";
+ unlink($myFile2);
+?>
+
+
+
+
+<div data-role="page">
+	<div deleteImages() </div>
 	<div data-role="header">
 		<a data-ref="back" data-role="button" data-inline="true">Back</a>
 		<h1>Almost done!</h1>
@@ -22,7 +34,8 @@
 
 	<p>This save button will generate pop up message</p>
 	<p>As of now "Save" doesn't do anything</p>
-	<a href="gallery.php" data-role="button">Save</a>
+
+	<a href="gallery.php" data-role="button" >Save</a>
 	<a href="printpage.php" data-role="button">Print</a>
 	<a href="facebook.html" data-role="button">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>
