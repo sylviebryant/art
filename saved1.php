@@ -16,7 +16,7 @@ include("config2.php");
 <div data-role="page">
 
 	<div data-role="header">
-			<a href="mashup.php" data-role="button" data-inline="true">Back</a>
+			<a data-rel="back" data-role="button" data-inline="true">Back</a>
 
 		<h1>Save</h1>
 	</div><!-- /header -->
@@ -25,7 +25,7 @@ include("config2.php");
 <FORM action="save.php" rel="external" method="post">
                  <div style="font:bold 10px arial,serif;" >Title</div>
                  <input type="text" name="title" maxlength="30" /><br />
-				<img src="images/mashup1.jpg" width="100%"/>
+				<img src="images/mashup1.jpg" width="200"/>
  <input type="hidden" name="urltoimage" value="images/mashup1.jpg" /><br />
                  <input id="submit" type="submit" value="submit" /><br />
                  </form>	</div><!-- /content -->

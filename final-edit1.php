@@ -9,27 +9,15 @@
 </head> 
 <body> 
 
-
-<?php
-
- $myFile1 = "upload/image1.jpg";
- unlink($myFile1);
- $myFile2 = "upload/image2.jpg";
- unlink($myFile2);
-?>
-
-
-
-
 <div data-role="page">
 	<div deleteImages() </div>
 	<div data-role="header">
-		<a data-ref="back" data-role="button" data-inline="true">Back</a>
+		<a href="mashup.php" data-role="button" data-inline="true">Back</a>
 		<h1>Almost done!</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<p>This page saves, prints and shares the painting</p>		
+		<p>This page saves and shares the painting.</p>		
 	</div><!-- /content -->
 <img width="100%" src='images/mashup1.jpg'/>
 	<a href="saved1.php" data-role="button">Save</a>

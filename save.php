@@ -20,11 +20,12 @@ session_start();
 <div data-role="page">
 
 <div data-role="header">
-		<h1>You have successfully saved your photo.</h1>
+		<h1>Saved</h1>
 		<a data-rel="back" data-role="button" data-inline="true">Back</a>
 </div><!-- /header -->
 
 <div data-role="body">
+<p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
 <a href="index.php" data-role="button" data-inline="true">Done</a>
 
 <?php
