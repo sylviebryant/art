@@ -1,14 +1,7 @@
-<?php
-session_start();
-	if(!isset($_SESSION['id'])){
-    	header("Location: index.php");
-	}
-?>
-
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<title>My Gallery</title> 
+	<title>Save & Share page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -17,29 +10,21 @@ session_start();
 <body> 
 
 <div data-role="page">
-
+	<div deleteImages() </div>
 	<div data-role="header">
-	<a href="index.php" data-role="button" data-inline="true">Back</a>
-		<h1>Gallery</h1>
+		<a data-ref="back" data-role="button" data-inline="true">Back</a>
+		<h1>Almost done!</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-
-		<?php
-			include("config2.php");
-			$query = "SELECT * FROM gallery";
-		$result = mysql_query($query);
-        while ($row = mysql_fetch_assoc($result)) {
-        	echo "<tr><td><h2>".$row["title"]."</h2>";
-			echo "<td><img width='100' class='pretty' src='".$row["image"]."' /></td></td>"; 
-        }
-
-?>
-
-</div>	
+		<p>This page saves, prints and shares the painting</p>		
 	</div><!-- /content -->
-	
-	
+<img width="100%" src='images/mashup4.jpg'/>
+	<a href="saved4.php" data-role="button">Save</a>
+	<!---a href="printpage.php" data-role="button">Print</a!--->
+	<a href="facebook.html" data-role="button" rel = "external">Share on Facebook</a>
+	<a href="index.php" data-role="button" data-inline="true">Done</a>
+
 
 </div><!-- /page -->
 

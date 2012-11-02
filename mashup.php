@@ -19,13 +19,13 @@
 <p>Select the photo the mashup that you like best:</p>
 <div class="ui-grid-a" margin-right="20px">
 	<div class="ui-block-a">
-	<a href="filter.php">
+	<a href="final-edit1.php" rel="external">
 		<img width="100%" src='images/mashup1.jpg' opacity="20%"/>
 		</a></div>
 	<div class="ui-block-b">
-	<a href="filter2.php"><img width="100%" src='images/mashup2.jpg'/></a></div>
-	<div class="ui-block-a"><a href="filter3.php"><img width="100%" src='images/mashup3.jpg'/></a></div>
-	<div class="ui-block-b"><a href="filter4.php"><img width="100%" src='images/mashup4.jpg'/></a></div>
+	<a href="final-edit2.php" rel="external"><img width="100%" src='images/mashup2.jpg'/></a></div>
+	<div class="ui-block-a"><a href="final-edit3.php" rel="external"><img width="100%" src='images/mashup3.jpg'/></a></div>
+	<div class="ui-block-b" rel="external"><a href="final-edit4.php"><img width="100%" src='images/mashup4.jpg'/></a></div>
 </div>
 
 </div>
