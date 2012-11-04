@@ -27,7 +27,8 @@ session_start();
 
 		<?php
 			include("config2.php");
-			$query = "SELECT * FROM gallery";
+			$id = $_SESSION['id'];
+			$query = "SELECT * FROM gallery WHERE username = '$id'";
 		$result = mysql_query($query);
         while ($row = mysql_fetch_assoc($result)) {
         	echo "<tr><td><h2>".$row["title"]."</h2>";
