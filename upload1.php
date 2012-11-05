@@ -1,5 +1,11 @@
 
 <?php
+global $a;
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+	$a=$_SESSION['id'];
 
 function bytesToSize1024($bytes, $precision = 2) {
     $unit = array('B','KB','MB');
@@ -11,7 +17,7 @@ $sFileType = $_FILES['image_file']['type'];
 $sFileSize = bytesToSize1024($_FILES['image_file']['size'], 1);
 
 
-if (move_uploaded_file($_FILES['image_file']['tmp_name'], "upload/image1.jpg")) {
+if (move_uploaded_file($_FILES['image_file']['tmp_name'], "upload/$a.image1.jpg")) {
 	
 }
 

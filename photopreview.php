@@ -21,8 +21,24 @@
 	<p> Click on the photo you want to change</p>
 	<div style="width:830px; background-color:white; height:120px;">
 		<div style="width: 2000px; height: 90px;">
-			<a href="takephoto1.html" data-role="image" data-inline="true" rel="external"><img src="upload/image1.jpg" width="120" height="100" />
-			<a href="takephoto2.html" data-role="image" data-inline="true" rel="external"><img src="upload/image2.jpg" width="120" height="100" />		
+			<a href="takephoto1.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
+				session_start();
+				if(!isset($_SESSION['id'])){
+				header("Location: index.php");
+				};
+				$a = $_SESSION['id'];
+				echo $a;
+				?>		
+				.image1.jpg" width="120" height="100" />
+			<a href="takephoto2.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
+				session_start();
+				if(!isset($_SESSION['id'])){
+				header("Location: index.php");
+				};
+				$a = $_SESSION['id'];
+				echo $a;
+				?>		
+				.image2.jpg" width="120" height="100" />	
 		</div>
 	</div>
 	<a href = "mashup.php" data-role = "button" data-theme="a">Generate</a>
