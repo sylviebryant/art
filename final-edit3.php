@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+?>
+
+
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -10,9 +19,8 @@
 <body> 
 
 <div data-role="page">
-	<div deleteImages() </div>
 	<div data-role="header">
-		<a data-ref="back" data-role="button" data-inline="true">Back</a>
+		<a href="mashup.php"  data-role="button" data-inline="true">Back</a>
 		<h1>Almost done!</h1>
 	</div><!-- /header -->
 
@@ -22,10 +30,13 @@
 <img width="100%" src='images/mashup3.jpg'/>
 	<a href="saved3.php" data-role="button">Save</a>
 	<!---a href="printpage.php" data-role="button">Print</a!--->
-	<a href="facebook.html" data-role="button" rel = "external">Share on Facebook</a>
+	<a href="facebook3.html" data-role="button" rel = "external">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>
 
+	
 
+	
+	
 </div><!-- /page -->
 
 </body>

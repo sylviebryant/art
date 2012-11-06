@@ -1,4 +1,16 @@
+<?php
+
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+?>
+
+
+
+
 <!DOCTYPE html> 
+
 <html> 
 <head> 
 	<title>Save & Share page</title> 
@@ -22,8 +34,9 @@
 <img width="100%" src='images/mashup1.jpg'/>
 	<a href="saved1.php" data-role="button">Save</a>
 	<!---a href="printpage.php" data-role="button">Print</a!--->
-	<a href="facebook.html" data-role="button" rel = "external">Share on Facebook</a>
+	<a href="facebook1.html" data-role="button" rel = "external">Share on Facebook</a>
 	<a href="index.php" data-role="button" data-inline="true">Done</a>
+
 
 
 </div><!-- /page -->
