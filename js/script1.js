@@ -1,4 +1,5 @@
 // common variables
+// common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
 var iPreviousBytesLoaded = 0;
@@ -27,6 +28,8 @@ function bytesToSize(bytes) {
 
 function fileSelected() {
 
+	
+	
     // hide different warnings
     document.getElementById('upload_response').style.display = 'none';
     document.getElementById('error').style.display = 'none';
@@ -178,4 +181,5 @@ function uploadAbort(e) { // upload abort
     document.getElementById('abort').style.display = 'block';
     clearInterval(oTimer);
 }
+
 

@@ -9,6 +9,9 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet" type="text/css" />
         <script src="js/script1.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
    </head>
 
@@ -19,8 +22,8 @@
 
 
 	<div data-role="header">
-	<a href="index.php" data-role="button" data-inline="true">Back</a>
-		<h1>Upload Photos</h1>
+	<a href="index.php" data-role="submit" data-inline="true">Back</a>
+		<h1>Upload First Photo</h1>
 	</div><!-- /header -->
        
         <div class="container">
@@ -28,11 +31,26 @@
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" action="upload1.php">
                     <div>
-                        <div><label for="image_file">Please select first photo</label></div>
+                        
                         <div><input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" onchange="fileSelected();" /></div>
                     </div>
                     <div>
-                       <input type="button" value="Upload" onclick="startUploading()"/>
+                       <input type ="button" name ="upload" value="Upload" onclick="startUploading()"/>
+					   <script>
+					   $(document).ready(
+					function(){
+					$('input:button').attr('disabled',true);
+					$('input:file').change(
+					function(){
+					if ($(this).val()){
+						$('input:button').removeAttr('disabled'); 
+					}
+					else {
+						$('input:button').attr('disabled',true);
+					}
+					});
+					});
+					   </script>
 			
                     </div>
                     <div id="fileinfo">

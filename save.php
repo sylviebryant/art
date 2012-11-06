@@ -35,6 +35,15 @@ $result = mysql_query("INSERT INTO `c_cs147_afauci`.`gallery` (`title`, `usernam
 
 ?>
 
+	<?php 
+				foreach(glob("upload/".$_SESSION['id']."*.*") as $file)
+				{
+					if(is_file($file))
+					@unlink($file);
+					}
+	?>
+
+
 </div>
 </div>
 

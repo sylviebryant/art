@@ -1,3 +1,12 @@
+<?php
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+?>
+
+
+
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -19,26 +28,16 @@
 
 	<div data-role="content">	
 	<p> Click on the photo you want to change</p>
-	<div style="width:830px; background-color:white; height:120px;">
+	<div style="width:500px; background-color:white; height:170px;">
 		<div style="width: 2000px; height: 90px;">
 			<a href="takephoto1.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
-				session_start();
-				if(!isset($_SESSION['id'])){
-				header("Location: index.php");
-				};
-				$a = $_SESSION['id'];
-				echo $a;
+				echo $_SESSION['id'];
 				?>		
-				.image1.jpg" width="120" height="100" />
+				.image1.jpg" height="170" />
 			<a href="takephoto2.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
-				session_start();
-				if(!isset($_SESSION['id'])){
-				header("Location: index.php");
-				};
-				$a = $_SESSION['id'];
-				echo $a;
+				echo $_SESSION['id'];
 				?>		
-				.image2.jpg" width="120" height="100" />	
+				.image2.jpg" height="170" />	
 		</div>
 	</div>
 	<a href = "mashup.php" data-role = "button" data-theme="a">Generate</a>
