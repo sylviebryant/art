@@ -25,7 +25,6 @@ session_start();
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<p>This page saves and shares the painting.</p>	
 		</div><!-- /content -->
 <img width="100%" src='images/mashup3.jpg'/>
 	<a href="saved3.php" data-role="button">Save</a>
