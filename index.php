@@ -19,7 +19,7 @@ session_start();
 <div data-role="page">
 
 	<div data-role="header">
-		<a href="login.php" data-role="button" data-inline="true">Login as a Different User</a>
+		<a href="login.php" data-role="button" data-inline="true">Logout</a>
 		<h1>Mash Photato</h1>
 	</div><!-- /header -->
 	

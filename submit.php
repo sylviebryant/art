@@ -6,7 +6,7 @@
 
 //session_start();
 // $_SESSION['test'] = 42;
- session_start();
+session_start();
 include("config.php");
 
 $username = mysql_real_escape_string($_POST['username']);
@@ -16,7 +16,8 @@ if (!isset($username) || !isset($password)) {
     header("Location: sorry.php");   
 }
 elseif (empty($username) || empty($password)) {
-    header("Location: sorry.php");
+   header("Location: sorry.php");
+
 } else {
     $result   = mysql_query("select * from login where username='$username' AND password='$password'");
     $rowCheck = mysql_num_rows($result);
