@@ -36,18 +36,18 @@
                         <div><input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" onchange="fileSelected();" /></div>
                     </div>
                     <div>
-                       <input type ="button" name ="upload" value="Upload" onclick="startUploading()"/>
+                       <input type ="submit" name ="upload" value="Upload" onclick="startUploading()"/>
 					   <script>
 					   $(document).ready(
 					function(){
-					$('input:button').attr('disabled',true);
+					$('input:submit').attr('disabled',true);
 					$('input:file').change(
 					function(){
 					if ($(this).val()){
-						$('input:button').removeAttr('disabled'); 
+						$('input:submit').removeAttr('disabled'); 
 					}
 					else {
-						$('input:button').attr('disabled',true);
+						$('input:submit').attr('disabled',true);
 					}
 					});
 					});
