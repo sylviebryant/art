@@ -26,7 +26,8 @@ session_start();
 
 <div data-role="body">
 <p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
-<a href="index.php" data-role="button" data-inline="true">Done</a>
+<a href="gallery.php" data-role="button" data-inline="true">Gallery</a>
+<a href="index.php" data-role="button" data-inline="true">Home</a>
 
 <?php
 include("config2.php");
