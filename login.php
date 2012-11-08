@@ -38,7 +38,7 @@
 
 <div data-role="page">
 	<div data-role="header">
-		<h1>Mash Photato Login Page</h1>
+		<h1>Mash Photato Login</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	

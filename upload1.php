@@ -1,4 +1,3 @@
-
 <?php
 global $a;
 session_start();
