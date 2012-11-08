@@ -16,7 +16,7 @@
 
 	</div><!-- /header -->
 
-<p>Select the photo the mashup that you like best:</p>
+<p>Select the mashup that you like best:</p>
 <div class="ui-grid-a" margin-right="20px">
 	<div class="ui-block-a">
 	<a href="final-edit1.php" rel="external">
