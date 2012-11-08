@@ -11,9 +11,8 @@ $password = md5(mysql_real_escape_string($_POST['password']));
     if ($rowCheck > 0) {
         while ($row = mysql_fetch_array($result)) {
 			$username = $row; 
-        } ?>
-        <?php echo "Username already exists. Please go back and choose another."; ?>
-<?php
+			header("Location: existingusername.php");
+        } 
 
 	} else {
 			$query2 = "insert into login values ('$username', '$password')";
