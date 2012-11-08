@@ -1,3 +1,13 @@
+<?php
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" >
    <head>
@@ -24,7 +34,7 @@
 	<div data-role="header">
 	<input type="button" class = "back" value="Back" inline = "true" onclick="window.location = 'index.php'" />
 	<label>  Upload First Photo  </label>
-	<input type="button" class = "Skip" value ="Skip" inline = "true" onclick="window.location='takephoto2.php'" <?php if (!file_exists('upload/'.$_SESSION['id'].'.image1.jpg')) echo 'disabled="disabled"' ?> /> 
+	<input type="button" class = "Skip" value ="Skip" inline = "true" onclick="window.location='photopreview.php'" <?php if (!file_exists('upload/'.$_SESSION['id'].'.image1.jpg')) echo 'disabled="disabled"' ?> /> 
 	</div><!-- /header -->
        
         <div class="container">
