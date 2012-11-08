@@ -168,7 +168,7 @@ function uploadFinish(e) { // upload successfully finished
     document.getElementById('progress').style.width = '400px';
     document.getElementById('filesize').innerHTML = sResultFileSize;
     document.getElementById('remaining').innerHTML = '| 00:00:00';
-    window.location="takephoto2.html";
+    window.location="takephoto2.php";
     clearInterval(oTimer);
 }
 

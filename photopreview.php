@@ -30,11 +30,11 @@ session_start();
 	<p> Click on the photo you want to change</p>
 	<div style="width:500px; background-color:white; height:170px;">
 		<div style="width: 2000px; height: 90px;">
-			<a href="takephoto1.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
+			<a href="takephoto1.php" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
 				echo $_SESSION['id'];
 				?>		
 				.image1.jpg" height="170" />
-			<a href="takephoto2.html" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
+			<a href="takephoto2.php" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
 				echo $_SESSION['id'];
 				?>		
 				.image2.jpg" height="170" />	

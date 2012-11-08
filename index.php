@@ -32,7 +32,7 @@ session_start();
 	
 	<div data-role="navbar">
 	<ul>
-		<li><a href="takephoto1.html" rel="external" class="ui-btn-active ui-state-persist">Create</a></li>
+		<li><a href="takephoto1.php" rel="external" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
 </div><!-- /navbar -->
