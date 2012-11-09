@@ -25,17 +25,17 @@ session_start();
 	</div><!-- /header -->
 
 	<div data-role="content">	
-	<p> Click on the photo you want to change</p>
+	<p> Changed Your Mind? Click on the Photos! </p>
 	<div style="width:500px; background-color:white; height:170px;">
 		<div style="width: 2000px; height: 90px;">
 			<a href="takephoto1.php" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
 				echo $_SESSION['id'];
 				?>		
-				.image1.jpg" height="170" />
+				.image1.jpg" height="130" />
 			<a href="takephoto2.php" data-role="image" data-inline="true" rel="external"><img src="upload/<?php 
 				echo $_SESSION['id'];
 				?>		
-				.image2.jpg" height="170" />	
+				.image2.jpg" height="130" />	
 		</div>
 	</div>
 	<a href = "mashup.php" data-role = "button" data-theme="a">Generate</a>
