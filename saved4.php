@@ -33,7 +33,7 @@ include("config2.php");
                  <input type="text" name="title" maxlength="30" /><br />
                  <img src="images/mashup4.jpg" width="200"/>
  <input type="hidden" name="urltoimage" value="images/mashup4.jpg" /><br />
-                 <input id="submit" type="submit" value="submit" /><br />
+                 <input id="submit" type="submit" value="Save" /><br />
                  </form>	</div><!-- /content -->
 
 	
