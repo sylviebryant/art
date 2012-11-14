@@ -38,21 +38,22 @@
 
 <div data-role="page">
 	<div data-role="header">
+		<a href="login.php" data-role="button" data-inline="true">Back</a>
 		<h1>New Account</h1>
 	</div><!-- /header -->
 	
-	<div data-role="content">	
+<!--	<div data-role="content">	
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
-	</div><!-- /content -->	
+	</div>  -->
 
 <form action="submit2.php" method="post" id="newlogin">						
-	<h2><span>Create New Login</span></h2>
+	<h2><span>Create New Account</span></h2>
 	<p><label>Username</label>
 	<input type="text" id="username" name="username" />
 	</p>
 	<p><label>Password</label>
 	<input type="password" id="password" name="password" /></p>
-	<input type="submit" value="New Login" />				
+	<input type="submit" value="Login" />				
 </form>	
 
 <a href="login.php" data-role="button" data-mini="true">Already have an Account? Sign in here. </a>

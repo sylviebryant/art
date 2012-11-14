@@ -42,6 +42,7 @@
 	</div><!-- /header -->
 	
 	<div data-role="content">	
+		<h2><span>Mash Photato Photo goes here</span></h2>
 		<p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div><!-- /content -->	
 

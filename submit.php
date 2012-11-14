@@ -1,11 +1,4 @@
 <?php
-//$a = session_id();
-//if(empty($a)) session_start();
-
-//session(id);
-
-//session_start();
-// $_SESSION['test'] = 42;
 session_start();
 include("config.php");
 
