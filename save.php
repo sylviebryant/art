@@ -26,6 +26,7 @@ session_start();
 
 <div data-role="body">
 <p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
+<a href="facebook1.html" data-role="button">Share on Facebook</a>
 <a href="gallery.php" data-role="button" data-inline="true">Gallery</a>
 <a href="index.php" data-role="button" data-inline="true">Home</a>
 
@@ -33,6 +34,9 @@ session_start();
 include("config2.php");
 
 $result = mysql_query("INSERT INTO `c_cs147_afauci`.`gallery` (`title`, `username`, `image`) VALUES ('$_POST[title]', '$_SESSION[id]', '$_POST[urltoimage]');");
+
+echo "<tr><td><h2>".$_POST[title]."</h2>";
+echo "<td><img width='100' class='pretty' src='".$_POST[urltoimage]."' /></td></td>"; 
 
 ?>
 
