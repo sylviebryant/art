@@ -27,7 +27,7 @@
 -->
   
 <head> 
-	<title>Mash Photato Login Page</title>
+	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -38,7 +38,7 @@
 
 <div data-role="page">
 	<div data-role="header">
-		<h1>Mash Photato Login</h1>
+		<h1>Login</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	
