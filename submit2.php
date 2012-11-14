@@ -6,6 +6,16 @@ $username = mysql_real_escape_string($_POST['username']);
 $realpassword = mysql_real_escape_string($_POST['password']);
 $password = md5(mysql_real_escape_string($_POST['password']));
 
+  <!--  if ($username == NULL || $realpassword == NULL) {
+      	 header("Location: sorry.php");
+       }   -->
+       
+    if (!isset($username) || !isset($realpassword)) {
+    header("Location: sorry.php");   
+	}
+	elseif (empty($username) || empty($realpassword)) {
+   header("Location: sorry.php"); 
+
     $result   = mysql_query("select * from login where username='$username'");
     $rowCheck = mysql_num_rows($result);
     if ($rowCheck > 0) {

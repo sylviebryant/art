@@ -27,7 +27,7 @@
 -->
   
 <head> 
-	<title>Mash Photato New Login</title>
+	<title>New Account</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -38,7 +38,7 @@
 
 <div data-role="page">
 	<div data-role="header">
-		<h1>Mash Photato New Login</h1>
+		<h1>New Account</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	
@@ -55,7 +55,7 @@
 	<input type="submit" value="New Login" />				
 </form>	
 
-<a href="login.php" data-role="button" data-mini="true">Already have a Login? Sign in here. </a>
+<a href="login.php" data-role="button" data-mini="true">Already have an Account? Sign in here. </a>
 
 </div><!-- /page -->
 </body>
