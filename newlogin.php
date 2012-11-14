@@ -46,13 +46,24 @@
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div>  -->
 
+
+
 <form action="submit2.php" method="post" id="newlogin">						
 	<h2><span>Create New Account</span></h2>
-	<p><label>Username</label>
-	<input type="text" id="username" name="username" />
-	</p>
+	<div data-role="fieldcontain">
+	  <label for="username">Username:</label>
+	  <input type="text" id="username" name="username" data-mini="true"/>
+	</div>	
+	
+	<div data-role="fieldcontain">
+	  <label for="password">Password:</label>
+	  <input type="password" id="password" name="password" data-mini="true"/>
+	</div>	
+	<!--
 	<p><label>Password</label>
 	<input type="password" id="password" name="password" /></p>
+	-->
+
 	<input type="submit" value="Login" />				
 </form>	
 

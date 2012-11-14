@@ -43,20 +43,32 @@
 	
 	<div data-role="content">	
 		<h2><span>Mash Photato Photo goes here</span></h2>
-		<p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
+		<!-- <p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>	-->	
 	</div><!-- /content -->	
 
 	<a href="newlogin.php" data-role="button" data-mini="true">New User? Create an Account</a>
 
+
 <form action="submit.php" method="post" id="login">						
 	<!-- <h2><span>Login</span></h2>  -->
-	<p><label>Username</label>
-	<input type="text" id="username" name="username" /></p>
-	<p><label>Password</label>
-	<input type="password" id="password" name="password" /></p>
+	<div data-role="fieldcontain">
+	  <label for="username">Username:</label>
+	  <input type="text" id="username" name="username" data-mini="true"/>
+	</div>	
+	
+	<div data-role="fieldcontain">
+	  	<label for="password">Password:</label>
+		<input type="password" id="password" name="password" data-mini="true"/>
+	</div>	
+		
 	<input type="submit" value="Login" />				
 </form>	
 
+<!--
+
+    <label for="name">Username: </label>
+    <input type="text" name="username" id="username" />
+-->
 <!--
 <form action="submit2.php" method="post" id="newlogin">					
 	<h2><span>Create New Login</span></h2>
