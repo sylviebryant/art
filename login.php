@@ -27,7 +27,7 @@
 -->
   
 <head> 
-	<title>Mash Photato Login Page</title>
+	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -38,24 +38,37 @@
 
 <div data-role="page">
 	<div data-role="header">
-		<h1>Mash Photato Login</h1>
+		<h1>Login</h1>
 	</div><!-- /header -->
 	
 	<div data-role="content">	
-		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
+		<h2><span>Mash Photato Photo goes here</span></h2>
+		<!-- <p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>	-->	
 	</div><!-- /content -->	
 
+	<a href="newlogin.php" data-role="button" data-mini="true">New User? Create an Account</a>
+
+
 <form action="submit.php" method="post" id="login">						
-	<h2><span>Login</span></h2>
-	<p><label>Username</label>
-	<input type="text" id="username" name="username" />
-	</p>
-	<p><label>Password</label>
-	<input type="password" id="password" name="password" /></p>
+	<!-- <h2><span>Login</span></h2>  -->
+	<div data-role="fieldcontain">
+	  <label for="username">Username:</label>
+	  <input type="text" id="username" name="username" data-mini="true"/>
+	</div>	
+	
+	<div data-role="fieldcontain">
+	  	<label for="password">Password:</label>
+		<input type="password" id="password" name="password" data-mini="true"/>
+	</div>	
+		
 	<input type="submit" value="Login" />				
 </form>	
 
-<a href="newlogin.php" data-role="button" data-mini="true">New User? Create a New Login</a>
+<!--
+
+    <label for="name">Username: </label>
+    <input type="text" name="username" id="username" />
+-->
 <!--
 <form action="submit2.php" method="post" id="newlogin">					
 	<h2><span>Create New Login</span></h2>

@@ -6,8 +6,20 @@ $username = mysql_real_escape_string($_POST['username']);
 $realpassword = mysql_real_escape_string($_POST['password']);
 $password = md5(mysql_real_escape_string($_POST['password']));
 
+if (!isset($username) || !isset($password)) {
+    header("Location: logincriteria.php");   
+}
+elseif (empty($username) || empty($password)) {
+   header("Location: logincriteria.php");
+}
+elseif ($username == NULL || $realpassword == NULL) {
+     header("Location: logincriteria.php");
+
+} else {
+	
     $result   = mysql_query("select * from login where username='$username'");
     $rowCheck = mysql_num_rows($result);
+
     if ($rowCheck > 0) {
         while ($row = mysql_fetch_array($result)) {
 			$username = $row; 
@@ -24,4 +36,5 @@ $password = md5(mysql_real_escape_string($_POST['password']));
 		//	echo "<p>Password: ".$realpassword."</p>";		
 		//	echo "<p>Encoded Password: ".$password."</p>";		
 			}
+}
 ?>

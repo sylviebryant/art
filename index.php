@@ -19,7 +19,7 @@ session_start();
 <div data-role="page">
 
 	<div data-role="header">
-		<a href="logout.php" data-role="button" data-inline="true">Logout</a>
+		<a href="logout.php" data-role="button" data-inline="true">Log out</a>
 		<h1>Mash Photato</h1>
 	</div><!-- /header -->
 	
