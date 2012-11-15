@@ -19,14 +19,14 @@ session_start();
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
-
+<div data-role="dialog">
 <div data-role="header">
-	<a data-rel="back" data-role="button" data-inline="true">Back</a>
-		<h1>Share on Facebook!</h1>
+		<h1>Share!</h1>
 	<a href="index.php" data-role="button" data-inline="true">Home</a>	
 	</div><!-- /header -->
 
 <body>
+
   <div id="fb-root"></div>
   <script>
     (function() {
@@ -62,10 +62,7 @@ session_start();
    <div id="login">
      <p><button onClick="loginUser();">Login</button></p>
    </div>
-   <div id="logout">
-     <div id="user-info"></div>
-     <p><button  onClick="FB.logout();">Logout</button></p>
-   </div>
+  
    
   <script>
     function loginUser() {    
@@ -89,31 +86,9 @@ session_start();
     }
   </script>
 
-  <a href="#" onclick="getUserFriends();">Get friends</a><br>
-  <div id="user-friends"></div>
-  <script>
-  function getUserFriends() {
-    FB.api('/me/friends&fields=name,picture', function(response) {
-      console.log('Got friends: ', response);
-      
-      if (!response.error) {
-        var markup = '';
-        
-        var friends = response.data;
-        
-        for (var i=0; i < friends.length && i < 25; i++) {
-          var friend = friends[i];
-          
-          markup += '<img src="' + friend.picture.data.url + '"> ' + friend.name + '<br>';
-        }
-        
-        document.getElementById('user-friends').innerHTML = markup;
-      }
-    });
-  }
-  </script>
+
  
-  <a href="#" onclick="publishStory();">Publish feed story</a><br>
+  <a href="#" input type = "button" onclick="publishStory();">Publish Photo</a><br>
   <script>
   function publishStory() {
     FB.ui({
@@ -130,18 +105,11 @@ session_start();
   }
   </script>
   
-  <a href="#" onclick="sendRequest();">Send request</a><br>
-  <script>
-  function sendRequest() {
-    FB.ui({
-      method: 'apprequests',
-      message: 'invites you to learn how to make your mobile web app social',
-    }, 
-    function(response) {
-      console.log('sendRequest response: ', response);
-    });
-  }
-  </script>
-  
+   <div id="logout">
+     <div id="user-info"></div>
+     <p><button  onClick="FB.logout();">Logout</button></p>
+   </div>
+
+  </div>
 </body>
 </html>
