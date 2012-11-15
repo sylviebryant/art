@@ -35,6 +35,15 @@ session_start();
 		<li><a href="takephoto1.php" rel="external" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
+	
+	<?php 
+				
+					
+			$file1 = "upload/".$_SESSION['id'].".image1.jpg";
+			$file2 = "upload/".$_SESSION['id'].".image2.jpg";
+			if(is_file($file1)) @unlink($file1);
+			if(is_file($file2)) @unlink($file2);
+	?>
 </div><!-- /navbar -->
 	
 </div><!-- /page -->

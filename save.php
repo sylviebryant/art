@@ -40,13 +40,7 @@ echo "<td><img width='100' class='pretty' src='".$_POST[urltoimage]."' /></td></
 
 ?>
 
-	<?php 
-				foreach(glob("upload/".$_SESSION['id']."*.*") as $file)
-				{
-					if(is_file($file))
-					@unlink($file);
-					}
-	?>
+
 
 
 </div>
