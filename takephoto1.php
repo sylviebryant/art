@@ -34,16 +34,15 @@ session_start();
 
        
         <div class="container">
-            
+ 
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" >
-						<div class="div0" >
-						<div class="div1" style="border:2px solid grey; width: 48%; float: left;"><img src ="upload/takephoto1.jpg" width="100%" /></div>
-                        <!--<div class = "section1" style="background-color: red; width: 50%; float: left;">  Tap to Choose </div>  --> 
+						<div class="ui-grid-a" margin-right="20px">
+						<div class="ui-block-a" ><img src ='upload/Add-Photo-button-1.png' width="100%" /></div>
                         <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
 						<script>
 						var once = false;
-						$(".div1").click(function(e) {
+						$(".ui-block-a").click(function(e) {
 						e.preventDefault();
 						e.stopPropagation();
 						if(!once){
@@ -53,11 +52,13 @@ session_start();
 						})				
 						
 					</script>
-					<div class="div2" style="border:2px solid silver;background-color: white; width: 48%; float: left;"><img src = "upload/takephoto2-grey.jpg" width ="100%" /></div>
-					</div>
 					
-                    <div>
-                       <input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
+                      
+			
+                 
+					<div class="ui-block-b"><img src = "upload/Add-Photo-button-2-grey.png" width ="100%" /></div>
+					
+					<div class="ui-block-a" ><input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
 					   <script>
 					   $(document).ready(
 					function(){
@@ -73,8 +74,10 @@ session_start();
 					});
 					});
 					   </script>
-			
-                    </div>
+					</div>
+					</div>
+					
+                   
                     <div id="fileinfo">
                         <div id="filename"></div>
                         <div id="filesize"></div>
