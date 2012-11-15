@@ -174,3 +174,29 @@ input[type=button] {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
     background: linear-gradient(#bbb, #eee);
 }
+
+
+.div0{
+ background-color: #ffffff;
+    box-shadow: 0 -1px 2px #111111;
+    display:block;
+    height:250px;
+    position:relative;
+    width:100%;
+    z-index:100;
+
+
+}
+
+.div1{
+font-family: Arial;
+font-size:25px;
+    height:250px;
+}
+
+.div2{
+font-family: Arial;
+font-size: 25px;
+color: grey;
+	height: 250px;
+}

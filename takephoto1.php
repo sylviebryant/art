@@ -30,20 +30,34 @@ session_start();
 
 	<div data-role="header">
 	<input type="button" class = "back" value="Back" inline = "true" onclick="window.location = 'index.php'" />
-	<label>  Upload First Photo  </label>
-	<input type="button" class = "Skip" value ="Skip" inline = "true" onclick="window.location='photopreview.php'" <?php if (!file_exists('upload/'.$_SESSION['id'].'.image1.jpg')) echo 'disabled="disabled"' ?> /> 
-	</div><!-- /header -->
+	</div>
+
        
         <div class="container">
             
             <div class="upload_form_cont">
-                <form id="upload_form" enctype="multipart/form-data" method="post" action="upload1.php">
+                <form id="upload_form" enctype="multipart/form-data" method="post" >
+						<div class="div0" >
+						<div class="div1" style="border:2px solid grey; width: 48%; float: left;"><img src ="upload/takephoto1.jpg" width="100%" /></div>
+                        <!--<div class = "section1" style="background-color: red; width: 50%; float: left;">  Tap to Choose </div>  --> 
+                        <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
+						<script>
+						var once = false;
+						$(".div1").click(function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						if(!once){
+							$('input[type="file"]').click()
+							once = true;
+						}
+						})				
+						
+					</script>
+					<div class="div2" style="border:2px solid silver;background-color: white; width: 48%; float: left;"><img src = "upload/takephoto2-grey.jpg" width ="100%" /></div>
+					</div>
+					
                     <div>
-                        
-                        <div><input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" onchange="fileSelected();" /></div>
-                    </div>
-                    <div>
-                       <input type ="submit" name ="upload" value="Upload" onclick="startUploading()"/>
+                       <input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
 					   <script>
 					   $(document).ready(
 					function(){
