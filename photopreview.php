@@ -34,9 +34,9 @@ session_start();
 	<div class = "ui-block-a" style="position: absolute; z-index:0"><input type = "image" class = "photo1" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image1.jpg"/></div>
-	<div class = "click1" style="position: absolute; z-index:1; left: 5%; top: 22%; font-size: 12pt; opacity: 0.6; color: red;" >Click Me to Change!</div>
+	<div class = "click1" style="position: absolute; z-index:1; left: 4.5%; top: 14%; font-size: 15px; opacity: 0.8; color: red;"><img src= "upload/change.png" width = "30%"></div>
 	<input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file1" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image1Selected();" />
-	<div class = "upload1"><input type ="submit" name ="upload" value="Upload" width = "100%" style="position:absolute; top = 180px;" onclick="startUploading1();"/>
+	<div class = "upload1"><input type ="submit" name ="upload" value="Upload" width = "50%" style="position:absolute; top = 180px;" onclick="startUploading1();"/>
 		<script>
 						$(".click1").click(function(e) {
 						
@@ -92,7 +92,7 @@ session_start();
 	<div class = "ui-block-b" style="position: absolute; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image2.jpg"/></div>
-	<div class = "click2" style="position: absolute; z-index:1; left: 50%; top: 22%; font-size: 12pt; opacity: 0.6; color: red;" >	Click Me to Change!</div>		
+	<div class = "click2" style="position: absolute; z-index:1; left: 50%; top: 14%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "30%"></div>		
 	<input type="file" class = "image2" accept="image/*" capture="camera" name="image_file" id="image_file2" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image2Selected();" />
 				
     <div class = "upload2"><input type ="button" id ="upload2" value="Upload" onclick="startUploading2()"/></div>
