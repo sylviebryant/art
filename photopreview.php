@@ -28,15 +28,15 @@ session_start();
 	</div><!-- /header -->
 
 	<div data-role="content">	
-	<div class="ui-grid-a" >
 
-	<div class = "ui-block-a"> <form id="upload_form1" enctype="multipart/form-data" method="post" >
-	<div class = "ui-block-a" style="position: absolute; z-index:0"><input type = "image" class = "photo1" img width="100%" src= "upload/<?php 
+
+	<div><form id="upload_form1" enctype="multipart/form-data" method="post" >
+	<div class = "click1" style="position: absolute; z-index:0"><input type = "image" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image1.jpg"/></div>
-	<div class = "click1" style="position: absolute; z-index:1; left: 4.5%; top: 14%; font-size: 15px; opacity: 0.8; color: red;"><img src= "upload/change.png" width = "30%"></div>
+	<div class = "click1" style="position: static; z-index:1; left: 4.5%; top: 14%; opacity: 0.8;" ><img src= "upload/change.png" width = "25%"></div>
 	<input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file1" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image1Selected();" />
-	<div class = "upload1"><input type ="submit" name ="upload" value="Upload" width = "50%" style="position:absolute; top = 180px;" onclick="startUploading1();"/>
+	<div class = "upload1" style="position: absolute; top: 12%; left:70%; "><input type ="submit" name ="upload" value = "Upload"  width = "50%"  onclick="startUploading1();"/></div>
 		<script>
 						$(".click1").click(function(e) {
 						
@@ -59,7 +59,7 @@ session_start();
 					});
 					   </script>
 			
-                    </div>
+       
                    
 
                     <div id="fileinfo">
@@ -85,17 +85,17 @@ session_start();
                         </div>
                         <div id="upload_response"></div>
                     </div>
-					</form>
-					</div>
-	
-	<div class = "ui-block-b"> <form id="upload_form2" enctype="multipart/form-data" method="post" >
-	<div class = "ui-block-b" style="position: absolute; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
+					</form></div>
+					
+					
+	<div><form id="upload_form2" enctype="multipart/form-data" method="post" >
+	<div class = "click2" style="position: absolute; top: 75%; z-index:0"><input type = "image" align = "middle" class = "photo2" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image2.jpg"/></div>
-	<div class = "click2" style="position: absolute; z-index:1; left: 50%; top: 14%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "30%"></div>		
+	<div class = "click2" style="position: absolute; z-index:1; left: 4.5%; top: 75%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "50%"></div>		
 	<input type="file" class = "image2" accept="image/*" capture="camera" name="image_file" id="image_file2" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image2Selected();" />
 				
-    <div class = "upload2"><input type ="button" id ="upload2" value="Upload" onclick="startUploading2()"/></div>
+    <div class = "upload2"style="position: absolute; top: 73%; left:70%; "><input type ="button" id ="upload2" value="Upload" width="50%" onclick="startUploading2()"/></div>
 	
 					   <script>
 								
@@ -140,7 +140,7 @@ session_start();
 					</form></div>
 					
 	
-	</div>
+	
 		</div><!-- /content -->		
 		
 	
