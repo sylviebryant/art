@@ -8,6 +8,7 @@ session_start();
 <!DOCTYPE html> 
 <html> 
 <head> 
+	<script src="//cdn.optimizely.com/js/139610984.js"></script>
 	<title>Mash Photato</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
