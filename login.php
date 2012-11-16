@@ -42,7 +42,10 @@
 	</div><!-- /header -->
 	
 	<div data-role="content">	
-		<h2><span>Mash Photato Photo goes here</span></h2>
+			
+		<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> 
+		<h3 align="center">Welcome to Mash Photato</h3>
+
 		<!-- <p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>	-->	
 	</div><!-- /content -->	
 
