@@ -89,7 +89,7 @@ session_start();
 					
 					
 	<div><form id="upload_form2" enctype="multipart/form-data" method="post" >
-	<div class = "click2" style="position: absolute; top: 75%; z-index:0"><input type = "image" align = "middle" class = "photo2" img width="100%" src= "upload/<?php 
+	<div class = "click2" style="position: absolute; top: 75%; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image2.jpg"/></div>
 	<div class = "click2" style="position: absolute; z-index:1; left: 4.5%; top: 75%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "50%"></div>		
@@ -98,7 +98,7 @@ session_start();
     <div class = "upload2"style="position: absolute; top: 73%; left:70%; "><input type ="button" id ="upload2" value="Upload" width="50%" onclick="startUploading2()"/></div>
 	
 					   <script>
-								
+								 
 						$(".click2").click(function(e) {
 						
 							$('input[class="image2"]').click()
