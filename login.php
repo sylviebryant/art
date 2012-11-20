@@ -55,8 +55,8 @@ From week5 VoteCaster:
 	<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />	
 
-	<link rel="apple-touch-icon" href="Mash-Photato-Icon.png" />
-	<link rel="apple-touch-startup-image" href="mashed-potatoes-and-gravy.png">
+	<link rel="apple-touch-icon" href="upload/Mash-Photato-Icon.png" />
+	<link rel="apple-touch-startup-image" href="upload/mashed-potatoes-and-gravy.png">
 	
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
@@ -70,7 +70,13 @@ From week5 VoteCaster:
 		<h1>Login</h1>
 	</div><!-- /header -->
 	
-	<div data-role="content">	
+	<div class = "click1" style="position: absolute; z-index:0; opacity:0.45">
+		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/mashed-potatoes-and-gravy.png">
+</body>
+		</div>
+			
+	<div class = "click2" style="position: absolute; z-index:1; left:7%">
+	<div data-role="content">		
 			
 		<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> 
 		<h3 align="center">Welcome to Mash Photato</h3>
@@ -95,6 +101,7 @@ From week5 VoteCaster:
 		
 	<input type="submit" value="Login" />				
 </form>	
+</div>
 
 <!--
 
