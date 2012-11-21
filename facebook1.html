@@ -96,7 +96,9 @@ session_start();
       name: 'I just created a painting using Mash Photato!',
       caption: 'This web app is awesome.',
       link: 'http://mashphotato.hciclass.com/art',
-      picture: 'http://mashphotato.hciclass.com/art/images/mashup1.jpg'
+      picture: 'http://mashphotato.hciclass.com/art/images/<?php 
+				echo $_SESSION['id'];
+				?>.v1.jpg'
     }, 
     function(response) {
       console.log('publishStory response: ', response);

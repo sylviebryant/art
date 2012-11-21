@@ -29,10 +29,14 @@ session_start();
 	<FORM action="save.php" rel="external" method="post">
                  <div style="font:bold 10px arial,serif;" >Title</div>
                  <input type="text" name="title" maxlength="30" />
-                 <input type="hidden" name="urltoimage" value="images/mashup4.jpg" />
+                 <input type="hidden" name="urltoimage" value="images/<?php 
+				echo $_SESSION['id'];
+				?>.v4.jpg" />
                  <input id="submit" type="submit" value="Save" /><br />
                  </form>
-                 <img width="100%" src='images/mashup4.jpg'/>
+                 <img width="100%" src='images/<?php 
+				echo $_SESSION['id'];
+				?>.v4.jpg' />
 
 
 </div><!-- /page -->

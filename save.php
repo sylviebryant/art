@@ -41,8 +41,7 @@ echo "<td><img width='100' class='pretty' src='".$_POST[urltoimage]."' /></td></
 ?>
 
 
-
-
+<div deleteImages() </div>
 </div>
 </div>
 

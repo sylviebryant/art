@@ -18,7 +18,6 @@ session_start();
 <body>
 
 <div data-role="page">
-	<div deleteImages() </div>
 	<div data-role="header">
 		<a href="mashup.php" data-role="button" data-inline="true">Back</a>
 		<h1>Save</h1>
@@ -30,10 +29,14 @@ session_start();
                  <div style="font:bold 10px arial,serif;" >Title</div>
                  <input type="text" name="title" maxlength="30" />
 
-<input type="hidden" name="urltoimage" value="images/mashup1.jpg" />
+<input type="hidden" name="urltoimage" value="images/<?php 
+				echo $_SESSION['id'];
+				?>.v1.jpg" />
                  <input id="submit" type="submit" value="Save" /><br />
                  </form>
-<img width="100%" src='images/mashup1.jpg'/>
+<img width="100%" src='images/<?php 
+				echo $_SESSION['id'];
+				?>.v1.jpg' />
 
 </div><!-- /page -->
 
