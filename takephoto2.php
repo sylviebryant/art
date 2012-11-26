@@ -37,7 +37,7 @@ session_start();
 				?>.image1.jpg"  width="100%" /></div>
 				<div class="ui-block-b"><img src = "upload/Add-Photo-button-2.png" width ="100%" />
 				
-					<input type="submit" value="Upload" onclick="startUploading()" /></div>
+					<div class = "upload"><input type="submit" value="Upload" onclick="startUploading()" /></div></div>
 					
                         <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
 						<script>
@@ -55,15 +55,18 @@ session_start();
 
 					   $(document).ready(
 						function(){
-						$('input:submit').attr('disabled',true);
+						 $(".upload").hide();
+						//$('input:submit').attr('disabled',true);
 						//$(".classname")
 						$('input:file').change(
 						function(){
 						if ($(this).val()){
-							$('input:submit').removeAttr('disabled'); 
+							//$('input:submit').removeAttr('disabled'); 
+							 $(".upload").show();
 						}
 						else {
-						$('input:submit').attr('disabled',true);
+						$(".upload").hide();
+						//$('input:submit').attr('disabled',true);
 						}
 						});
 						});

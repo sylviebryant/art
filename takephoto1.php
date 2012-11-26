@@ -10,10 +10,10 @@ session_start();
    <head>
         <meta charset="utf-8" />
         <title>UploadPhoto</title>
-        <link rel="apple-touch-icon" href="appicon.png" />
-	    <link rel="apple-touch-startup-image" href="startup.png">
+        <!--<link rel="apple-touch-icon" href="appicon.png" />
+	    <link rel="apple-touch-startup-image" href="startup.png">-->
 	    <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/main.css" rel="stylesheet" type="text/css" />
         <script src="js/script1.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
@@ -38,42 +38,47 @@ session_start();
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" >
 						<div class="ui-grid-a" margin-right="20px">
-						<div class="ui-block-a" ><img src ='upload/Add-Photo-button-1.png' width="100%" /></div>
-                        <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
+						<div class="ui-block-a" ><div class ="test"><img src ='upload/Add-Photo-button-1.png' width="100%" /></div>
+                        <input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
 						<script>
 						var once = false;
-						$(".ui-block-a").click(function(e) {
+						$(".test").click(function(e) {
 						e.preventDefault();
 						e.stopPropagation();
 						if(!once){
-							$('input[type="file"]').click()
+							$('input[class="image1"]').click()
 							once = true;
 						}
 						})				
 						
-					</script>
+					</script></div>
 					
                       
 			
                  
 					<div class="ui-block-b"><img src = "upload/Add-Photo-button-2-grey.png" width ="100%" /></div>
 					
-					<div class="ui-block-a" ><input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
+					<div class="ui-block-a" >
+					<div class = "upload"> <input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
 					   <script>
 					   $(document).ready(
 					function(){
-					$('input:submit').attr('disabled',true);
+					 $(".upload").hide();
+					//$('input:submit').attr('disabled',true);
 					$('input:file').change(
 					function(){
 					if ($(this).val()){
-						$('input:submit').removeAttr('disabled'); 
+						//$('input:submit').removeAttr('disabled'); 
+						$(".upload").show();
 					}
 					else {
-						$('input:submit').attr('disabled',true);
+					 $(".upload").hide();
+						//$('input:submit').attr('disabled',true);
 					}
 					});
 					});
 					   </script>
+					   </div>
 					</div>
 					</div>
 					
@@ -84,9 +89,9 @@ session_start();
                         <div id="filetype"></div>
                         <div id="filedim"></div>
                     </div>
-                    <div id="error">You should select valid image files only!</div>
-                    <div id="error2">An error occurred while uploading the file</div>
-                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                    <div id="error"></div>
+                    <div id="error2"></div>
+                    <div id="abort"></div>
                     <div id="warnsize"></div>
 
                     <div id="progress_info">
@@ -105,6 +110,8 @@ session_start();
 
                 <img id="preview" />
             </div>
+			
+			
         </div>
     </body>
 </html>
