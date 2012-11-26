@@ -29,11 +29,17 @@ session_start();
 	<FORM action="save.php" rel="external" method="post">
                  <div style="font:bold 10px arial,serif;" >Title</div>
                  <input type="text" name="title" maxlength="30" />
+<?php 
+$date = (string)strtotime("now");
+copy("images/$_SESSION[id].v1.jpg", "images/$_SESSION[id].$date.jpg")
+?>
+<input type="hidden" name="urltoimage" value="images/<?php
+echo $_SESSION[id];?>
+.
+<?php echo $date;?>
+.jpg" />
 
-<input type="hidden" name="urltoimage" value="images/<?php 
-				echo $_SESSION['id'];
-				?>.v3.jpg" />
-                 <input id="submit" type="submit" value="Save" /><br />
+                 <input id="submit" type="submit" value="Save"/><br />
                  </form>
 <img width="100%" src='images/<?php 
 				echo $_SESSION['id'];
