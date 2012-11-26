@@ -40,9 +40,7 @@ copy("images/$_SESSION[id].v2.jpg", "images/$_SESSION[id].$date.jpg");
 
 ?>
 <input type="hidden" name="urltoimage" value="images/<?php
-echo $_SESSION[id];?>
-.
-<?php echo $date;?>
+echo $_SESSION[id];?>.<?php echo $date;?>
 .jpg" />
 
 
