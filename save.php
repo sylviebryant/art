@@ -26,9 +26,13 @@ session_start();
 
 <div data-role="body">
 <p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
-<a href="facebook1.html" data-role="button">Share on Facebook</a>
+<FORM action="facebook.php" rel="external" method="post">
+<input type="hidden" name="url" value=<?php echo $_POST[urltoimage];?> />
+<input id="submit" type="submit" value="Share on Facebook"/><br />
+</FORM>
 <a href="gallery.php" data-role="button" data-inline="true">Gallery</a>
 <a href="index.php" data-role="button" data-inline="true">Home</a>
+
 
 <?php
 include("config2.php");
