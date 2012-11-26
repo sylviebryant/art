@@ -31,7 +31,14 @@ session_start();
                  <input type="text" name="title" maxlength="30" />
 <?php 
 $date = (string)strtotime("now");
-copy("images/$_SESSION[id].v3.jpg", "images/$_SESSION[id].$date.jpg")
+$_SESSION['date'] = $date;
+copy("images/$_SESSION[id].v3.jpg", "images/$_SESSION[id].$date.jpg");
+
+//save it as final image
+//copy("images/$_SESSION[id].v3.jpg", "images/$_SESSION[id].final.jpg");
+
+
+
 ?>
 <input type="hidden" name="urltoimage" value="images/<?php
 echo $_SESSION[id];?>

@@ -28,7 +28,7 @@ session_start();
 <p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
 <FORM action="facebook.php" rel="external" method="post">
 <?php 
-copy(echo $_POST[urltoimage], "images/$_SESSION[id].final.jpg")
+//copy(echo $_POST[urltoimage], "images/$_SESSION[id].final.jpg")
 ?>
 <input id="submit" type="submit" value="Share on Facebook"/><br />
 </FORM>
@@ -43,7 +43,7 @@ $result = mysql_query("INSERT INTO `c_cs147_afauci`.`gallery` (`title`, `usernam
 
 echo "<tr><td><h2>".$_POST[title]."</h2>";
 echo "<td><img width='100' class='pretty' src='".$_POST[urltoimage]."' /></td></td>"; 
-
+//copy($_POST[urltoimage], "images/$_SESSION[id].final.jpg")
 ?>
 
 
