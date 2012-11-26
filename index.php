@@ -31,15 +31,18 @@ session_start();
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
 	</div><!-- /content -->
 	
+	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
+	 <a href="gallery.php" data-role="button">Gallery</a> 
+
+	<!--
 	<div data-role="navbar">
 	<ul>
 		<li><a href="takephoto1.php" rel="external" class="ui-btn-active ui-state-persist">Create</a></li>
 		<li><a href="gallery.php">Gallery</a></li>
 	</ul>
+	-->
 	
-	<?php 
-				
-					
+	<?php 		
 			$file1 = "upload/".$_SESSION['id'].".image1.jpg";
 			$file2 = "upload/".$_SESSION['id'].".image2.jpg";
 			if(is_file($file1)) @unlink($file1);
