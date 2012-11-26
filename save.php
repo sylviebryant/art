@@ -28,7 +28,7 @@ session_start();
 <p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
 <FORM action="facebook.php" rel="external" method="post">
 <?php 
-copy($_POST[urltoimage], "save/$_SESSION[id].final.jpg")
+copy(echo $_POST[urltoimage], "images/$_SESSION[id].final.jpg")
 ?>
 <input id="submit" type="submit" value="Share on Facebook"/><br />
 </FORM>
