@@ -52,14 +52,14 @@ session_start();
 	</ul>
 	
 	<?php 
-			foreach(glob('images/'.$_SESSION['id'].'*.*') as $file)
-		if(is_file($file))
-        @unlink($file);	
 					
-			$file1 = "upload/".$_SESSION['id'].".image1.jpg";
-			$file2 = "upload/".$_SESSION['id'].".image2.jpg";
-			if(is_file($file1)) @unlink($file1);
-			if(is_file($file2)) @unlink($file2);
+			//$file1 = "upload/".$_SESSION['id'].".image1.jpg";
+			//$file2 = "upload/".$_SESSION['id'].".image2.jpg";
+			//if(is_file($file1)) @unlink($file1);
+			//if(is_file($file2)) @unlink($file2);
+			
+			
+			
 	?>
 </div><!-- /navbar -->
 	
