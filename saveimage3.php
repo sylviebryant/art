@@ -31,7 +31,7 @@ session_start();
                  <input type="text" name="title" maxlength="30" />
 <?php 
 $date = (string)strtotime("now");
-copy("images/$_SESSION[id].v1.jpg", "images/$_SESSION[id].$date.jpg")
+copy("images/$_SESSION[id].v3.jpg", "images/$_SESSION[id].$date.jpg")
 ?>
 <input type="hidden" name="urltoimage" value="images/<?php
 echo $_SESSION[id];?>
