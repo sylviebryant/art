@@ -20,7 +20,7 @@ session_start();
 <div data-role="page">
 	<div deleteImages() </div>
 	<div data-role="header">
-		<a href="mashup.php" data-role="button" data-inline="true">Back</a>
+		<a href="mashup1.php" data-role="button" data-inline="true">Back</a>
 		<h1>Save</h1>
 	</div><!-- /header -->
 

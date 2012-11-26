@@ -6,8 +6,26 @@ session_start();
 ?>
 
 <!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Mashup</title> 	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
 
+<body> 
+<div data-role="page">
 
+	<div data-role= "header">
+		<a href = "photopreview.php" data-role = "button" data-theme = "a"> Back </a>
+		<h1>Mashups</h1>
+		<a href = "mashup.php" data-role = "button" data-theme="b" rel = "external"> Remash</a>
+
+	</div><!-- /header -->
+
+	
 <?php
 
 include "phmagick.php";
@@ -17,11 +35,13 @@ include "phmagick.php";
  $p->darken(30);
  $p->contrast();
  
- $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v1top.jpg');
- $p->rotate(180);
+ $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v1top.jpg'); 
+ $p->rotate(rand(150, 210));
  $p->smooth();
+ $times = rand (1, 3);
+ for ($i = 0; $i < $times; $i++){
  $p->contrast();
- $p->contrast();
+ }
  $phMagick = &new phMagick('upload/'.$_SESSION['id'].'.v1bottom.jpg', 'images/'.$_SESSION['id'].'.v1.jpg');
  $phMagick->watermark('upload/'.$_SESSION['id'].'.v1top.jpg', phMagickGravity::Center, 60);
 
@@ -30,11 +50,19 @@ include "phmagick.php";
  $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v2bottom.jpg');
  $p->reflection(60,50);
  $p = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v2top.jpg');
- $p->sepia();
- $p->saturate();
- $p->saturate();
+ //either sepia/toGreyScale/nothing
+ $option = rand(0,2);
+ if ($option == 1) $p->sepia();
+ else if ($option == 0) $p->toGreyScale();
+ 
+ //saturate based on rand times
+ $times = rand (1, 3);
+ for ($i = 0; $i < $times; $i++){
+  $p->saturate();
+  $p->saturate();
+ }
  $phMagick = &new phMagick('upload/'.$_SESSION['id'].'.v2bottom.jpg', 'images/'.$_SESSION['id'].'.v2.jpg');
- $phMagick->watermark('upload/'.$_SESSION['id'].'.v2top.jpg', phMagickGravity::Center, 30);
+ $phMagick->watermark('upload/'.$_SESSION['id'].'.v2top.jpg', phMagickGravity::Center, rand(20,40));
  
  $target_file = "images/".$_SESSION['id'].".v2.jpg";
 	$thumbnail = "images/".$_SESSION['id'].".v2.jpg";
@@ -50,10 +78,12 @@ $p->sharpen();
 $p->sepia();
 
 $q = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v3top.jpg');
-$q->invertColors();
+$option = rand(0,2);
+ if ($option == 1) $q->invertColors();
+ else if ($option == 0) $q->sepia();
 
 $r = new phmagick('upload/'.$_SESSION['id'].'.v3bottom.jpg','images/'.$_SESSION['id'].'.v3.jpg');
-$r->watermark('upload/'.$_SESSION['id'].'.v3top.jpg', phMagickGravity::Center, 70); 
+$r->watermark('upload/'.$_SESSION['id'].'.v3top.jpg', phMagickGravity::Center, rand(50,80)); 
 
 //version4
 $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v4bottom.jpg');	
@@ -61,33 +91,20 @@ $p->contrast();
 $p->saturate();
 
 $q = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v4top.jpg');
-$q->rotate(45);
+$q->rotate(rand(30, 60));
 $q->toGreyScale();
 
 $r = new phmagick('upload/'.$_SESSION['id'].'.v4bottom.jpg','images/'.$_SESSION['id'].'.v4.jpg');
-$r->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Center, 70); 
+$r->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Center, rand(50,80)); 
 
 
 
 ?>
 
-<html> 
-<head> 
-	<title>Mashup</title> 
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-</head> 
-<div data-role="page>
-<body> 
-	<div data-role="header">
-				<a href="photopreview.php" data-role="button" data-inline="true">Back</a>
-				<h1>Mashups</h1>
 
-	</div><!-- /header -->
 
+
+	<div data-role="content">	
 <p>Select the mashup that you like best:</p>
 <div class="ui-grid-a" margin-right="20px">
 	<div class="ui-block-a">
