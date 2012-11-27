@@ -24,11 +24,6 @@ session_start();
 	</div><!-- /header -->
 
 	<div data-role="content">	
-
-		
-	<div class = "test"> <p> this is<?php 
-				echo $_SESSION['url'];
-				?> </p> </div>
 				
 				
 		<?php
