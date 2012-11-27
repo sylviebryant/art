@@ -25,22 +25,55 @@ session_start();
 
 	<div data-role="content">	
 
+		
+	<div class = "test"> <p> this is<?php 
+				echo $_SESSION['url'];
+				?> </p> </div>
+				
+				
 		<?php
 			include("config2.php");
 			$id = $_SESSION['id'];
 			$query = "SELECT * FROM gallery WHERE username = '$id'";
 		$result = mysql_query($query);
+			$a = 1;
         while ($row = mysql_fetch_assoc($result)) {
-        	echo "<tr><td><h2>".$row["title"]."</h2>";
-			echo "<td><img width='100' class='pretty' src='".$row["image"]."' /></td></td>"; 
+			$_SESSION['index'] = $a;
+			$item = (string)$a;
+        	echo "<tr><h4>".$row["title"]."</h4></tr>";
+			echo "<a href='#$item' data-rel='popup'><input type = 'image' img width='100' style='max-width:95%;border:6px double #545565;' class='pretty' src='".$row["image"]."' /></a>"; 
+			$_SESSION['item'] = $row["image"];
+			
+			echo "<div data-role= 'popup' id='$item'><input type = 'image' img width='280' style='max-width:95%;border:6px double #545565;' class='pretty' src= '".$row["image"]."' /></div>";
+			//print ($row["image"]);
+			//echo "<div class  = 'buttons'><a href = 'form.php' data-role='button' data-rel='dialog' data-inline='true'>Delete</a><a href='facebook.php'  data-rel='dialog' data-role='button' data-inline='true' data-theme= 'b' >Share</a></a></div>";
+			//if (isset($_POST['submit']))
+			//{
+				//print("Hello World");
+				//$file = $_SESSION['url'];
+				//if(is_file($file)) unlink($file);
+			//}
+			
+			//<img style="max-width:95%;border:6px inset #545565;" src="http://www.quackit.com/pix/milford_sound/milford_sound_t.jpg" alt="Milford Sound in New Zealand" />
+			
+			
+			//function deleteImage()
+			//{
+				//$file = $_SESSION['url'];
+				//if(is_file($file)) unlink('$row["image"]');
+			//}
+			//$displayImg = $row["image"];
+			//echo "$dispayImg";
+			++$a;
         }
 
 ?>
 
+
+
 </div>	
 	</div><!-- /content -->
-	
-	
+
 
 </div><!-- /page -->
 
