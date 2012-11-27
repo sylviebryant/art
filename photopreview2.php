@@ -8,13 +8,27 @@ session_start();
 <!DOCTYPE html> 
 <html> 
 <head> 
+	<script src="//cdn.optimizely.com/js/139610984.js"></script>
 	<title>photopreview</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" /> 
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/scriptchg1.js"></script>
 	<script src="js/scriptchg2.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36373072-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 </head> 
 <body> 
@@ -24,11 +38,12 @@ session_start();
 	<div data-role="header">
 		<a href = "index.php" data-role = "button" data-theme = "a"> Home </a>
 		<h1>Preview</h1>
-		<a href = "mashup.php" data-role = "button" data-theme="b">Mash 'em Up!</a>
+
 	</div><!-- /header -->
 
-	<div data-role="content">	
+		<div class = "mashemupbutton" style="position: relative; z-index:1;" > <a href="mashup.php" data-role="button" data-mini="true"> <img src = "upload/Mashemup2.png" width ="50%"> </a></div>
 
+	<div data-role="content">	
 
 	<div><form id="upload_form1" enctype="multipart/form-data" method="post" >
 	<div class = "click1" style="position: absolute; z-index:0"><input type = "image" img width="100%" src= "upload/<?php 
