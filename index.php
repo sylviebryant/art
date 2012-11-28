@@ -7,11 +7,12 @@ session_start();
 
 <!DOCTYPE html> 
 <html> 
-<head> 
-	
+<head>
+	<script src="//cdn.optimizely.com/js/139610984.js"></script>
 	<title>Mash Photato</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="style.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script type="text/javascript">
@@ -28,12 +29,19 @@ session_start();
 
 </script>
 </head> 
-<body> 
+<body>
 
 <div data-role="page">
-<script src="//cdn.optimizely.com/js/139610984.js"></script>
+
+
+<style>
+  .ui-page { background-image:url('upload/TiledPotatoBkgdTransparent.png'); background-opacity:0.45}
+</style>
+
+<
 
 	<div data-role="header" data-position="inline" vertical-align="middle">
+	
 		<a href="logout.php" data-role="button" data-inline="true">Log out</a>	
 	<div class="ui-bar">  
 	<div align = "center">
@@ -47,10 +55,16 @@ session_start();
 	<div data-role="content">	
 	<!--<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> -->
 
+
+
+<!--
+<div class = "click1" style="position: absolute; z-index:0; opacity:0.45">
+		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/TiledPotatoBkgd.png">
+		</div> -->
 <?php
-	echo "<p>Hi ".$_SESSION['id'].",</p>";
+	echo "<p><b>Hi ".$_SESSION['id'].",</b></p>";
 ?>
-		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
+		<p><b>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</b></p>		
 		<!-- <div class="image"><img src ='upload/MashupExample.png' width="100%" /></div> -->
 
 	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
@@ -77,9 +91,9 @@ session_start();
 			
 			
 	?>
+
 </div><!-- /navbar -->
 	
 </div><!-- /page -->
-
 </body>
 </html>
