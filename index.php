@@ -33,23 +33,29 @@ session_start();
 <div data-role="page">
 <script src="//cdn.optimizely.com/js/139610984.js"></script>
 
-	<div data-role="header">
-		<a href="logout.php" data-role="button" data-inline="true">Log out</a>
-		<h1>Mash Photato</h1>
+	<div data-role="header" data-position="inline" vertical-align="middle">
+		<a href="logout.php" data-role="button" data-inline="true">Log out</a>	
+	<div class="ui-bar">  
+	<div align = "center">
+		<!-- <h1 align="middle">Mash Photato</h1> --> 
+		<img src = "upload/Mash-Photato-Icon.png" height="30" width="30" img style="float:middle" align="middle"/>
+	</div>
+	<!-- <span class="ui-title"  -->
+	</div>  <!--/ui-bar-->
 	</div><!-- /header -->
 	
 	<div data-role="content">	
-
-	<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> 
+	<!--<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> -->
 
 <?php
 	echo "<p>Hi ".$_SESSION['id'].",</p>";
 ?>
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
-		<div class="image"><img src ='upload/MashupExample.png' width="100%" /></div>
+		<!-- <div class="image"><img src ='upload/MashupExample.png' width="100%" /></div> -->
 
 	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
 	 <a href="gallery.php" data-role="button">Gallery</a> 
+		<div class="image"><img src ='upload/MashupExampleVertical.png' width="100%" /></div>
 
 		</div><!-- /content -->
 
