@@ -33,12 +33,9 @@ session_start();
 
 <div data-role="page">
 
-
 <style>
   .ui-page { background-image:url('upload/TiledPotatoBkgdTransparent.png'); background-opacity:0.45}
 </style>
-
-<
 
 	<div data-role="header" data-position="inline" vertical-align="middle">
 	
