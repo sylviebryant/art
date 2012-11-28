@@ -39,16 +39,20 @@ session_start();
 	</div><!-- /header -->
 	
 	<div data-role="content">	
+
+	<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> 
+
 <?php
 	echo "<p>Hi ".$_SESSION['id'].",</p>";
 ?>
 		<p>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>		
-	</div><!-- /content -->
-	
+		<div class="image"><img src ='upload/MashupExample.png' width="100%" /></div>
+
 	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
 	 <a href="gallery.php" data-role="button">Gallery</a> 
 
-	
+		</div><!-- /content -->
+
 	<!--
 	<div data-role="navbar">
 	<ul>
