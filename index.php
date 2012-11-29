@@ -34,41 +34,42 @@ session_start();
 <div data-role="page">
 
 <style>
-  .ui-page { background-image:url('upload/TiledPotatoBkgdTransparent.png'); background-opacity:0.45}
+  .ui-page { background-image:url('upload/pyramid_background_black3.png'); background-opacity:0.45}
 </style>
 
-	<div data-role="header" data-position="inline" vertical-align="middle">
+<!--	<div data-role="header" data-position="inline" vertical-align="middle"> -->
 	
-		<a href="logout.php" data-role="button" data-inline="true">Log out</a>	
-	<div class="ui-bar">  
-	<div align = "center">
+
+		<a href="logout.php" data-role="button" data-inline="true" data-mini="true" data-theme="a">Log out</a>
+	
+<!--	<div class="ui-bar">  --> 
+
+	
+	 <div align = "center">
 		<!-- <h1 align="middle">Mash Photato</h1> --> 
-		<img src = "upload/Mash-Photato-Icon.png" height="30" width="30" img style="float:middle" align="middle"/>
-	</div>
-	<!-- <span class="ui-title"  -->
-	</div>  <!--/ui-bar-->
-	</div><!-- /header -->
+		<img src = "upload/Mash-Photato-Icon.png" height="60" width="60" img style="float:middle" align="middle"/>
+</div>
 	
-	<div data-role="content">	
-	<!--<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> -->
-
-
-
-<!--
-<div class = "click1" style="position: absolute; z-index:0; opacity:0.45">
-		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/TiledPotatoBkgd.png">
-		</div> -->
+	<!-- <span class="ui-title"  -->
+<!--	</div>  /ui-bar-->
+<!--	</div>   /header -->
+	
+	<div data-role="content">
+	
+	<font color="#FFFFFF">
 <?php
-	echo "<p><b>Hi ".$_SESSION['id'].",</b></p>";
+	echo "<p><b> Hi ".$_SESSION['id'].",</b></p>";
 ?>
-		<p><b>Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</b></p>		
+</font>
+
+		<p><b><font color="#FFFFFF">Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</font></b></p>		
 		<!-- <div class="image"><img src ='upload/MashupExample.png' width="100%" /></div> -->
 
 	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
 	 <a href="gallery.php" data-role="button">Gallery</a> 
 		<div class="image"><img src ='upload/MashupExampleVertical.png' width="100%" /></div>
 
-		</div><!-- /content -->
+	</div><!-- /content -->
 
 	<!--
 	<div data-role="navbar">

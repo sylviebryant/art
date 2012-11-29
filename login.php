@@ -56,7 +56,7 @@ From week5 VoteCaster:
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />	
 
 	<link rel="apple-touch-icon" href="upload/Mash-Photato-Icon.png" />
-	<link rel="apple-touch-startup-image" href="upload/mashed-potatoes-and-gravy.png">
+	<link rel="apple-touch-startup-image" href="upload/WelcomeScreen.png">
 	
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
@@ -71,7 +71,7 @@ From week5 VoteCaster:
 	</div><!-- /header -->
 	
 	<div class = "click1" style="position: absolute; z-index:0; opacity:0.45">
-		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/mashed-potatoes-and-gravy.png">
+		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/TiledPotatoBkgdTransparent.png">
 </body>
 		</div>
 			
