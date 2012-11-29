@@ -15,6 +15,19 @@ session_start();
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36373072-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head> 
 <body>
 
@@ -24,10 +37,10 @@ session_start();
 		<h1>Save</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
+
 	</div><!-- /content -->
 	<FORM action="save.php" rel="external" method="post">
-				<h2><font color = "blue">Title</font></h2>
+                 <h2><font color = "blue">Title</font></h2>
                  <input type="text" id="title" name="title" maxlength="30"/>
 <?php 
 $date = (string)strtotime("now");
@@ -43,9 +56,7 @@ copy("images/$_SESSION[id].v1.jpg", "images/$_SESSION[id].$date.jpg");
 ?>
 
 <input type="hidden" name="urltoimage" value="images/<?php
-echo $_SESSION[id];?>.
-<?php echo $date;?>
-.jpg" />
+echo $_SESSION[id];?>.<?php echo $date;?>.jpg" />
 
                  <input id="submit" type="submit" value="Save"/><br />
                  </form>
@@ -53,6 +64,6 @@ echo $_SESSION[id];?>.
 		echo $_SESSION[id]?>.v1.jpg' />
 		
 </div><!-- /page -->
-
+	<div data-role="content">	
 </body>
 </html>
