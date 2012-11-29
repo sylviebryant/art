@@ -1,24 +1,37 @@
+<?php
+session_start();
+	if(!isset($_SESSION['id'])){
+    	header("Location: index.php");
+	}
+?>
+
 <!DOCTYPE html> 
 <html> 
-<head> 	
+<head> 
+	<title>Print Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-</head>
+</head> 
 <body> 
+
 <div data-role="page">
 
+	<div data-role="header">
+		<a href="pick-photo.php" data-role="button" data-inline="true">Back</a>
 
-	<div data-role= "header">
-		<h1>Error!!</h1>
-		<a href="login.php" data-role="button" data-inline="true">Back</a>
+		<h1>Take Your Photo</h1>
 	</div><!-- /header -->
-	
-	<div data-role="content">	
-	<p>Invalid login! Please go back and try again.	</p>
-	</div><!-- /content -->
-</div>
-</body>
 
+	<div data-role="content">	
+		<p>this page offers the options to either</p>	
+		<p>take photo</p>
+		<p>choose photos from camera</p>
+		<p>search photo online</p>	
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
 </html>
