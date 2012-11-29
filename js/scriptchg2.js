@@ -105,7 +105,7 @@ function startUploading2() {
     oXHR.addEventListener('load', uploadFinish2, false);
     oXHR.addEventListener('error', uploadError2, false);
     oXHR.addEventListener('abort', uploadAbort2, false);
-    oXHR.open('POST', 'upload2.php');
+    oXHR.open('POST', 'upload4.php');
     oXHR.send(vFD);
     // set inner timer
     oTimer = setInterval(doInnerUpdates1, 300);

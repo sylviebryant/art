@@ -29,13 +29,22 @@ session_start();
 <?php
 
 include "phmagick.php";
+$binary = rand(0,1);
+if ($binary == 0) { 
+	$image1 = "upload/".$_SESSION['id'].".image1.jpg";
+	$image2 = "upload/".$_SESSION['id'].".image2.jpg";
+	}
+else {
+	$image1 = "upload/".$_SESSION['id'].".image2.jpg";
+	$image2 = "upload/".$_SESSION['id'].".image1.jpg";
+}
 //version1
 
- $p = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v1bottom.jpg');
+ $p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v1bottom.jpg');
  $p->darken(30);
  $p->contrast();
  
- $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v1top.jpg'); 
+ $p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v1top.jpg'); 
  $p->rotate(rand(150, 210));
  $p->smooth();
  $times = rand (1, 3);
@@ -47,9 +56,9 @@ include "phmagick.php";
 
 //version2
 	include_once("imageprocess.php");
- $p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v2bottom.jpg');
+ $p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v2bottom.jpg');
  $p->reflection(60,50);
- $p = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v2top.jpg');
+ $p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v2top.jpg');
  //either sepia/toGreyScale/nothing
  $option = rand(0,2);
  if ($option == 1) $p->sepia();
@@ -73,29 +82,29 @@ include "phmagick.php";
 
 
 //version3
-$p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v3bottom.jpg');	
+$p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v3bottom.jpg');	
 $p->sharpen();
 $p->sepia();
 
-$q = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v3top.jpg');
+$p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v3top.jpg');
 $option = rand(0,2);
- if ($option == 1) $q->invertColors();
- else if ($option == 0) $q->sepia();
+ if ($option == 1) $p->invertColors();
+ else if ($option == 0) $p->sepia();
 
-$r = new phmagick('upload/'.$_SESSION['id'].'.v3bottom.jpg','images/'.$_SESSION['id'].'.v3.jpg');
-$r->watermark('upload/'.$_SESSION['id'].'.v3top.jpg', phMagickGravity::Center, rand(50,80)); 
+$phMagick = new phmagick('upload/'.$_SESSION['id'].'.v3bottom.jpg','images/'.$_SESSION['id'].'.v3.jpg');
+$phMagick->watermark('upload/'.$_SESSION['id'].'.v3top.jpg', phMagickGravity::Center, rand(50,80)); 
 
 //version4
-$p = new phmagick('upload/'.$_SESSION['id'].'.image1.jpg', 'upload/'.$_SESSION['id'].'.v4bottom.jpg');	
+$p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v4bottom.jpg');	
 $p->contrast();
 $p->saturate();
 
-$q = new phmagick('upload/'.$_SESSION['id'].'.image2.jpg', 'upload/'.$_SESSION['id'].'.v4top.jpg');
-$q->rotate(rand(30, 60));
-$q->toGreyScale();
+$p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v4top.jpg');
+$p->rotate(rand(30, 60));
+$p->toGreyScale();
 
-$r = new phmagick('upload/'.$_SESSION['id'].'.v4bottom.jpg','images/'.$_SESSION['id'].'.v4.jpg');
-$r->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Center, rand(50,80)); 
+$phMagick = new phmagick('upload/'.$_SESSION['id'].'.v4bottom.jpg','images/'.$_SESSION['id'].'.v4.jpg');
+$phMagick->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Center, rand(50,80)); 
 
 
 
@@ -105,25 +114,21 @@ $r->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Center, r
 
 
 	<div data-role="content">	
-<p>Select the mashup that you like best:</p>
-<div class="ui-grid-a" margin-right="20px">
-	<div class="ui-block-a">
-	<a href="saveimage1.php" rel="external">
-		<img width="100%" src='images/<?php 
-				echo $_SESSION['id'];
-				?>.v1.jpg'/>
-		</a></div>
-	<div class="ui-block-b">
-	<a href="saveimage2.php" rel="external"><img width="100%" src='images/<?php 
-				echo $_SESSION['id'];
-				?>.v2.jpg'/></a></div>
-	<div class="ui-block-a"><a href="saveimage3.php" rel="external"><img width="100%" src='images/<?php 
-				echo $_SESSION['id'];
-				?>.v3.jpg'/></a></div>
-	<div class="ui-block-b" rel="external"><a href="saveimage4.php"><img width="100%" src='images/<?php 
-				echo $_SESSION['id'];
-				?>.v4.jpg'/></a></div>
-</div>
+<h3><font color = "blue">Click on your favorite mashup:</font></h3>
+<table>
+<tr>
+<td><a href="saveimage1.php" rel="external"><img src='images/<?php 
+				echo $_SESSION['id'];?>.v1.jpg' width = "100%"/></a></td>
+<td><a href="saveimage2.php" rel="external"><img src='images/<?php 
+				echo $_SESSION['id'];?>.v2.jpg' width = "100%"/></a></td>
+</tr>
+<tr>
+<td><a href="saveimage3.php" rel="external"><img src='images/<?php 
+				echo $_SESSION['id'];?>.v3.jpg' width = "100%" /></a></td>
+<td><a href="saveimage4.php" rel="external"><img src='images/<?php 
+				echo $_SESSION['id'];?>.v4.jpg' width = "100%" /></a></td>
+</tr>
+</table>
 
 </div>
 </div>

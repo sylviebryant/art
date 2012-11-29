@@ -38,48 +38,70 @@ session_start();
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post" >
 						<div class="ui-grid-a" margin-right="20px">
-						<div class="ui-block-a" ><div class ="test"><img src ='upload/Add-Photo-button-1.png' width="100%" /></div>
-                        <input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
+						<div class="ui-block-a" ><img src ='upload/Add-Photo-button-1.png' width="100%" /></div>
+						<input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
+               
 						<script>
 						var once = false;
-						$(".test").click(function(e) {
+						$(".ui-block-a").click(function(e) {
 						e.preventDefault();
 						e.stopPropagation();
 						if(!once){
-							$('input[class="image1"]').click()
+							$('input[type="file"]').click()
 							once = true;
 						}
 						})				
 						
-					</script></div>
+						</script>
+						<script>
+					   $(document).ready(
+					function(){
+					// $(".upload").hide();
+					//$('input:submit').attr('disabled',true);
+					$('input:file').change(
+					function(){
+					if ($(this).val()){
+						//$('input:submit').removeAttr('disabled'); 
+						//$(".upload").show();
+						startUploading();
+					}
+					else {
+					 //$(".upload").hide();
+						//$('input:submit').attr('disabled',true);
+					}
+					});
+					});
+					   
+					</script>
 					
                       
 			
                  
 					<div class="ui-block-b"><img src = "upload/Add-Photo-button-2-grey.png" width ="100%" /></div>
 					
-					<div class="ui-block-a" >
-					<div class = "upload"> <input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>
+					<!--<div class="ui-block-a" >
+					<div class = "upload"> <input type ="submit" class "upload" name ="upload" value="Upload" width = "50%" onclick="startUploading()"/>-->
 					   <script>
-					   $(document).ready(
+					  /* $(document).ready(
 					function(){
-					 $(".upload").hide();
+					// $(".upload").hide();
 					//$('input:submit').attr('disabled',true);
 					$('input:file').change(
 					function(){
 					if ($(this).val()){
 						//$('input:submit').removeAttr('disabled'); 
-						$(".upload").show();
+						//$(".upload").show();
+						startUploading();
 					}
 					else {
-					 $(".upload").hide();
+					 //$(".upload").hide();
 						//$('input:submit').attr('disabled',true);
 					}
 					});
-					});
+					});*/
 					   </script>
-					   </div>
-					</div>
+					   <!--</div>
+					</div>-->
 					</div>
 					
                    

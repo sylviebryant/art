@@ -8,7 +8,6 @@ session_start();
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<script src="//cdn.optimizely.com/js/139610984.js"></script>
 	<title>photopreview</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
@@ -16,18 +15,6 @@ session_start();
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/scriptchg1.js"></script>
 	<script src="js/scriptchg2.js"></script>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36373072-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 </head> 
 <body> 
@@ -37,19 +24,19 @@ session_start();
 	<div data-role="header">
 		<a href = "index.php" data-role = "button" data-theme = "a"> Home </a>
 		<h1>Preview</h1>
-		<a href = "mashup.php" data-role = "button" data-theme="b">Mash 'em Up!</a>
+		<a href = "mashup.php" data-role = "button" data-theme="b" rel = "external"	>Mash 'em Up!</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 
 
 	<div><form id="upload_form1" enctype="multipart/form-data" method="post" >
-	<div class = "click1" style="position: absolute; z-index:0"><input type = "image" img width="100%" src= "upload/<?php 
+	<div class = "display1" style="position: absolute; z-index:0"><input type = "image" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image1.jpg"/></div>
-	<div class = "click1" style="position: static; z-index:1; left: 4.5%; top: 14%; opacity: 0.8;" ><img src= "upload/change.png" width = "25%"></div>
+	<div class = "click1" style="position: absolute; z-index:1; left: 4.5%; top: 14%; opacity: 0.8;" ><img src= "upload/change.png" width = "50%"></div>
 	<input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file1" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image1Selected();" />
-	<div class = "upload1" style="position: absolute; top: 12%; left:70%; "><input type ="submit" name ="upload" value = "Upload"  width = "50%"  onclick="startUploading1();"/></div>
+	<!--<div class = "upload1" style="position: absolute; top: 12%; left:70%; "><input type ="submit" name ="upload" value = "Upload"  width = "50%"  onclick="startUploading1();"/></div>-->
 		<script>
 						$(".click1").click(function(e) {
 						
@@ -57,16 +44,17 @@ session_start();
 							
 						})				
 		
-					   $(".upload1").hide();
+					   //$(".upload1").hide();
 					   $(document).ready(
 					function(){				
 					$(".image1").change(
 					function(){
 					if ($(this).val()){
-						$(".upload1").show();
+						startUploading1();
+						//$(".upload1").show();
 					}
 					else {
-						$(".upload1").hide();
+						//$(".upload1").hide();
 					}
 					});
 					});
@@ -102,13 +90,13 @@ session_start();
 					
 					
 	<div><form id="upload_form2" enctype="multipart/form-data" method="post" >
-	<div class = "click2" style="position: absolute; top: 75%; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
+	<div class = "display2" style="position: absolute; top: 75%; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
 				echo $_SESSION['id'];
 				?>.image2.jpg"/></div>
 	<div class = "click2" style="position: absolute; z-index:1; left: 4.5%; top: 75%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "50%"></div>		
 	<input type="file" class = "image2" accept="image/*" capture="camera" name="image_file" id="image_file2" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image2Selected();" />
 				
-    <div class = "upload2"style="position: absolute; top: 73%; left:70%; "><input type ="button" id ="upload2" value="Upload" width="50%" onclick="startUploading2()"/></div>
+    <!--<div class = "upload2" style="position: absolute; top: 73%; left:70%; "><input type ="button" id ="upload2" value="Upload" width="50%" onclick="startUploading2()"/></div>-->
 	
 					   <script>
 								 
@@ -118,7 +106,7 @@ session_start();
 							
 						})	
 						
-						$(".upload2").hide();
+						//$(".upload2").hide();
 					   $(document).ready(
 					function(){
 					
@@ -126,10 +114,11 @@ session_start();
 					$(".image2").change(
 					function(){
 					if ($(this).val()){
-						$(".upload2").show();
+						startUploading2();
+						//$(".upload2").show();
 					}
 					else {
-						$(".upload2").hide();
+						//$(".upload2").hide();
 					}
 					});
 					});

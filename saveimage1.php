@@ -27,7 +27,7 @@ session_start();
 	<div data-role="content">	
 	</div><!-- /content -->
 	<FORM action="save.php" rel="external" method="post">
-                 <div style="font:bold 10px arial,serif;" >Title</div>
+				<h2><font color = "blue">Title</font></h2>
                  <input type="text" id="title" name="title" maxlength="30"/>
 <?php 
 $date = (string)strtotime("now");

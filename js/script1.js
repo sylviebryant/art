@@ -1,5 +1,4 @@
 // common variables
-// common variables
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
 var iPreviousBytesLoaded = 0;
@@ -28,8 +27,6 @@ function bytesToSize(bytes) {
 
 function fileSelected() {
 
-	
-	
     // hide different warnings
     document.getElementById('upload_response').style.display = 'none';
     document.getElementById('error').style.display = 'none';
@@ -79,7 +76,6 @@ function fileSelected() {
     oReader.readAsDataURL(oFile);
 }
 
-
 function startUploading() {
     // cleanup all temp states
     iPreviousBytesLoaded = 0;
@@ -103,16 +99,12 @@ function startUploading() {
     oXHR.addEventListener('load', uploadFinish, false);
     oXHR.addEventListener('error', uploadError, false);
     oXHR.addEventListener('abort', uploadAbort, false);
-    oXHR.open('POST', 'upload1.php');
+    oXHR.open('POST', 'upload2.php');
     oXHR.send(vFD);
-    
-	
+
     // set inner timer
     oTimer = setInterval(doInnerUpdates, 300);
-	
 }
-
-
 
 function doInnerUpdates() { // we will use this function to display upload speed
     var iCB = iBytesUploaded;

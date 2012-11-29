@@ -31,13 +31,13 @@ session_start();
             
             <div class="upload_form_cont">
                 <form id="upload_form" enctype="multipart/form-data" method="post">
-				<div class="ui-grid-a" margin-right="20px">
+				<div class="ui-grid-a" >
 				<div class="ui-block-a" ><img src ="upload/<?php 
 				echo $_SESSION['id'];
 				?>.image1.jpg"  width="100%" /></div>
 				<div class="ui-block-b"><img src = "upload/Add-Photo-button-2.png" width ="100%" />
 				
-					<div class = "upload"><input type="submit" value="Upload" onclick="startUploading()" /></div></div>
+					<!--<div class = "upload"><input type="submit" value="Upload" onclick="startUploading()" /></div>--></div>
 					
                         <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
 						<script>
@@ -55,17 +55,18 @@ session_start();
 
 					   $(document).ready(
 						function(){
-						 $(".upload").hide();
+						// $(".upload").hide();
 						//$('input:submit').attr('disabled',true);
 						//$(".classname")
 						$('input:file').change(
 						function(){
 						if ($(this).val()){
+							startUploading();
 							//$('input:submit').removeAttr('disabled'); 
-							 $(".upload").show();
+							// $(".upload").show();
 						}
 						else {
-						$(".upload").hide();
+						//$(".upload").hide();
 						//$('input:submit').attr('disabled',true);
 						}
 						});
@@ -86,9 +87,9 @@ session_start();
                         <div id="filetype"></div>
                         <div id="filedim"></div>
                     </div>
-                    <div id="error">You should select valid image files only!</div>
-                    <div id="error2">An error occurred while uploading the file</div>
-                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                    <div id="error"></div>
+                    <div id="error2"></div>
+                    <div id="abort"></div>
                     <div id="warnsize"></div>
 
                     <div id="progress_info">
