@@ -37,8 +37,8 @@ session_start();
 		<h1>Save</h1>
 	</div><!-- /header -->
 
-
-	</div><!-- /content -->
+	<div data-role="content">	
+	
 	<FORM action="save.php" rel="external" method="post">
                  <h2><font color = "blue">Title</font></h2>
                  <input type="text" id="title" name="title" maxlength="30"/>
@@ -64,6 +64,6 @@ echo $_SESSION[id];?>.<?php echo $date;?>.jpg" />
 		echo $_SESSION[id]?>.v1.jpg' />
 		
 </div><!-- /page -->
-	<div data-role="content">	
+</div><!-- /content -->
 </body>
 </html>
