@@ -14,24 +14,11 @@ session_start();
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36373072-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head> 
 <body>
 
 <div data-role="page">
-	
+	<div deleteImages() </div>
 	<div data-role="header">
 		<a href="mashup1.php" data-role="button" data-inline="true">Back</a>
 		<h1>Save</h1>
@@ -39,9 +26,12 @@ session_start();
 
 	<div data-role="content">	
 	
-	<FORM action="save.php" rel="external" method="post">
-                 <div style="font:bold 10px arial,serif;" >Title</div>
-                 <input type="text" name="title" maxlength="30" />
+		<FORM action="save.php" rel="external" method="post">
+								 
+				 <div data-role="fieldcontain" class="ui-hide-label">
+				<label for="title">Title</label>
+				<input type="text" name="title" id="title" value="" maxlength="30" placeholder="Please give your mashup a name:"/>
+</div>
 <?php 
 $date = (string)strtotime("now");
 $_SESSION['date'] = $date;
@@ -61,8 +51,7 @@ echo $_SESSION[id];?>.<?php echo $date;?>.jpg" />
 <img width="100%" src='images/<?php 
 				echo $_SESSION['id'];
 				?>.v3.jpg' />
-
-				</div><!-- /content -->
+</div><!-- /content -->
 </div><!-- /page -->
 
 </body>

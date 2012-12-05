@@ -11,6 +11,7 @@ session_start();
 	<title>photopreview</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link href="css/sub.css" rel="stylesheet" type="text/css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/scriptchg1.js"></script>
@@ -31,12 +32,12 @@ session_start();
 
 
 	<div><form id="upload_form1" enctype="multipart/form-data" method="post" >
-	<div class = "display1" style="position: absolute; z-index:0"><input type = "image" img width="100%" src= "upload/<?php 
+	<div class = "display1" style="position: absolute; z-index:0"><input type = "image" img width="85%" src= "upload/<?php 
 				echo $_SESSION['id'];
-				?>.image1.jpg"/></div>
+				?>.image1.jpg" style='max-width:83%;border:6px double #000000;'/></div>
 	<div class = "click1" style="position: absolute; z-index:1; left: 4.5%; top: 14%; opacity: 0.8;" ><img src= "upload/change.png" width = "50%"></div>
 	<input type="file" class = "image1" accept="image/*" capture="camera" name="image_file" id="image_file1" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image1Selected();" />
-	<!--<div class = "upload1" style="position: absolute; top: 12%; left:70%; "><input type ="submit" name ="upload" value = "Upload"  width = "50%"  onclick="startUploading1();"/></div>-->
+	
 		<script>
 						$(".click1").click(function(e) {
 						
@@ -87,16 +88,16 @@ session_start();
                         <div id="upload_response"></div>
                     </div>
 					</form></div>
-					
-					
+								
 	<div><form id="upload_form2" enctype="multipart/form-data" method="post" >
-	<div class = "display2" style="position: absolute; top: 75%; z-index:0"><input type = "image" class = "photo2" img width="100%" src= "upload/<?php 
+	<div class = "display2" style="position: absolute; top: 75%; z-index:0"><input type = "image" class = "photo2" img width="85%" src= "upload/<?php 
 				echo $_SESSION['id'];
-				?>.image2.jpg"/></div>
+				?>.image2.jpg" style='max-width:83%;border:6px double #000000;'/></div>
+	
 	<div class = "click2" style="position: absolute; z-index:1; left: 4.5%; top: 75%; font-size: 15px; opacity: 0.8; color: red;" ><img src= "upload/change.png" width = "50%"></div>		
 	<input type="file" class = "image2" accept="image/*" capture="camera" name="image_file" id="image_file2" style="visibility:hidden;position:absolute;top:0;left:0" onchange="image2Selected();" />
 				
-    <!--<div class = "upload2" style="position: absolute; top: 73%; left:70%; "><input type ="button" id ="upload2" value="Upload" width="50%" onclick="startUploading2()"/></div>-->
+   
 	
 					   <script>
 								 

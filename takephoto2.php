@@ -10,11 +10,9 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <title>UploadPhoto</title>
-        <link rel="apple-touch-icon" href="appicon.png" />
-	    <link rel="apple-touch-startup-image" href="startup.png">
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="css/sub.css" rel="stylesheet" type="text/css" />
         <script src="js/script2.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -26,7 +24,7 @@ session_start();
   <div data-role="header">
 	<input type="button" class = "back" value="Back" inline = "true" onclick="window.location = 'takephoto1.php'" />
 	</div><!-- /header -->
-	
+	<div class = "divider"> </div>
         <div class="container">
             
             <div class="upload_form_cont">
@@ -35,9 +33,7 @@ session_start();
 				<div class="ui-block-a" ><img src ="upload/<?php 
 				echo $_SESSION['id'];
 				?>.image1.jpg"  width="100%" /></div>
-				<div class="ui-block-b"><img src = "upload/Add-Photo-button-2.png" width ="100%" />
-				
-					<!--<div class = "upload"><input type="submit" value="Upload" onclick="startUploading()" /></div>--></div>
+				<div class="ui-block-b"><img src = "upload/Add-Photo-button-2.png" width ="100%" /></div>
 					
                         <input type="file" accept="image/*" capture="camera" name="image_file" id="image_file" style="visibility:hidden;position:absolute;top:0;left:0" onchange="fileSelected();" />
 						<script>
@@ -55,20 +51,15 @@ session_start();
 
 					   $(document).ready(
 						function(){
-						// $(".upload").hide();
-						//$('input:submit').attr('disabled',true);
-						//$(".classname")
+						
 						$('input:file').change(
 						function(){
 						if ($(this).val()){
 							startUploading();
-							//$('input:submit').removeAttr('disabled'); 
-							// $(".upload").show();
+							
 						}
-						else {
-						//$(".upload").hide();
-						//$('input:submit').attr('disabled',true);
-						}
+						
+						
 						});
 						});
 					   </script>
