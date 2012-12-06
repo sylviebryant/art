@@ -19,8 +19,8 @@ session_start();
 <body>
 
 <div data-role="page">
-	<div data-role="header">
-		<a href="mashup1.php" data-role="button" data-inline="true">Back</a>
+	<div data-role="header" data-theme = "c">
+		<a href="mashup1.php" data-role="button" data-icon = "back" data-theme = "c" data-inline="true">Back</a>
 		<h1>Save</h1>
 	</div><!-- /header -->
 
@@ -50,7 +50,7 @@ echo $_SESSION['id'];?>.<?php echo $date;?>.jpg" />
 
                  <input id="submit" type="submit" value="Save"/><br />
                  </form>
-<img width="100%" src='images/<?php
+<img width="90%" src='images/<?php
 		echo $_SESSION['id']?>.v1.jpg' />
 </div><!-- /content -->		
 </div><!-- /page -->

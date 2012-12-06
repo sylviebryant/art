@@ -40,8 +40,9 @@ session_start();
 		<h1>Preview</h1>
 
 	</div><!-- /header -->
-
-		<div class = "mashemupbutton" style="position: relative; z-index:1;" > <a href="mashup.php" data-role="button" data-mini="true"> <img src = "upload/Mashemup2.png" width ="50%"> </a></div>
+	
+	<input type = "image" img src = "buttons/MashEmUpButton.png" width = "50%"/>
+		<!--<div class = "mashemupbutton" style="position: relative; z-index:1;" > <a href="mashup.php" data-role="button" data-mini="true"> <img src = "upload/Mashemup2.png" width ="50%"> </a></div>-->
 
 	<div data-role="content">	
 

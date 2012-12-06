@@ -12,42 +12,25 @@ session_start();
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link href="css/sub.css" rel="stylesheet" type="text/css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36373072-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head>
  
 <body>
 <div data-role="page">
 
-<div data-role="header">
-		<h1>Saved</h1>
-		<a data-rel="back" data-role="button" data-inline="true">Back</a>
+<div data-role="header" data-theme = "c">
+		<h1>Photo Saved!</h1>
+		<a data-rel="back" data-theme = "c" data-icon = "back" data-role="button" data-inline="true">Back</a>
 </div><!-- /header -->
 
-<div data-role="body">
-<p>You have successfully saved your photo! You can now view it in your gallery from the home page. </p>
-<FORM action="facebook.php" rel="external" method="post">
-<?php 
-//copy(echo $_POST[urltoimage], "images/$_SESSION[id].final.jpg")
-?>
-<input id="submit" type="submit" value="Share on Facebook"/><br />
-</FORM>
-<a href="gallery.php" data-role="button" data-inline="true">Gallery</a>
-<a href="index.php" data-role="button" data-inline="true">Home</a>
+<div class="ui-grid-a">
+	<div class="ui-block-a"><a href = "index.php"><img src = "buttons/HomeButton.png" width = "100%"></a></div>
+	<div class="ui-block-b"><a href = "facebook.php"><img src = "buttons/ShareButton.png" width = "100%"></a></div>
+</div><!-- /grid-a -->
 
+<div data-role="content">
 
 <?php
 include("config2.php");
@@ -55,12 +38,14 @@ include("config2.php");
 $result = mysql_query("INSERT INTO `c_cs147_afauci`.`gallery` (`title`, `username`, `image`) VALUES ('$_POST[title]', '$_SESSION[id]', '$_POST[urltoimage]');");
 
 echo "<tr><td><h2>".$_POST[title]."</h2>";
-echo "<td><img width='100' class='pretty' src='".$_POST[urltoimage]."' /></td></td>"; 
+echo "<td><img width='280' class='pretty' src='".$_POST[urltoimage]."' /></td></td>"; 
+
 ?>
 
 
+ </div>
 </div>
-</div>
+
 
 </body>
 </html>

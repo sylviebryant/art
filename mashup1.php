@@ -19,8 +19,8 @@ session_start();
 <body> 
 <div data-role="page">
 
-	<div data-role= "header">
-		<a href = "photopreview.php" data-role = "button" data-theme = "a"> Back </a>
+	<div data-role= "header" data-theme = "c">
+		<a href = "photopreview.php" data-role = "button" data-theme = "c">Back</a>
 		<h1>Mashups</h1>
 		<a href = "mashup.php" data-role = "button" data-theme="b" rel = "external" >Remash</a>
 
