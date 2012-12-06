@@ -1,4 +1,4 @@
-<?php
+	<?php
 session_start();
 	if(!isset($_SESSION['id'])){
     	header("Location: login.php");
@@ -32,7 +32,7 @@ session_start();
 	<div data-role="content">	
 	 <div align = "center">
 		
-		<img src = "buttons/StartMashingButton.png" width="100" img style="float:middle" align="middle"/>
+		<img src = "buttons/StartMashingButton.png" width="100" img style="float:middle" align="middle" onclick= "window.location = 'takephoto1.php'"/>
 </div>
 
 	
@@ -50,7 +50,6 @@ session_start();
 			echo "<p><b> Hi ".$_SESSION['id'].",</b></p>";
 			echo "<div class = 'space'></div>";
 			echo "<h3 style='text-align:center;'>Start your journey HERE!</h3>";
-			echo "<div class = 'img' style='text-align:center;'><img src = 'arrow.jpg' width = '100' /></div>";
 		}
 		else {
 			echo "<p> Hi ".$_SESSION['id'].", here's your Gallery</p>";
