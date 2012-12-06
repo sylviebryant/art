@@ -25,6 +25,7 @@
 <div id="result"></div>
 <div id="result2"></div>
 -->
+
   
 <head> 
 	<title>Login</title>
@@ -45,7 +46,6 @@ From week5 VoteCaster:
 	
 	<script src="jquery-1.8.2.min.js"></script>
 	<script src="jquery.mobile-1.2.0.js"></script>
-	
 -->
 
 <meta charset="utf-8">
@@ -70,11 +70,18 @@ From week5 VoteCaster:
 	<div data-role="header">
 		<h1>Login</h1>
 	</div><!-- /header -->
-	
+
 	<div class = "click1" style="position: absolute; z-index:0; opacity:0.45">
+		  
+ <!-- 	<style>
+  .ui-page { background-image:url('upload/TiledPotatoBkgdTransparent.png'); background-opacity:0.45}
+    .ui-page { background-image:url('upload/TiledPotatoBkgdTransparent.png'); background-opacity:0.45}
+	</style>
+	-->
+		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/TiledPotatoBkgdTransparent.png">
 		<img class="source-image" img id="background-img" class="bg" alt="" src="upload/TiledPotatoBkgdTransparent.png">
 </body>
-		</div>
+	</div> <!--/background -->
 			
 	<div class = "click2" style="position: absolute; z-index:1; left:7%">
 	<div data-role="content">		
@@ -82,7 +89,6 @@ From week5 VoteCaster:
 		<p align="center"><img src = "upload/Mash-Photato-Icon.png" height="57" width="57" img style="float:middle"></p> 
 		<h3 align="center">Welcome to Mash Photato</h3>
 
-		<!-- <p>Login to Mash Photato, the only app that takes your two photos to create an artful mashup!</p>	-->	
 	</div><!-- /content -->	
 
 	<a href="newlogin.php" data-role="button" data-mini="true">New User? Create an Account</a>
@@ -102,7 +108,12 @@ From week5 VoteCaster:
 		
 	<input type="submit" value="Login" />				
 </form>	
-</div>
+
+	<div class="image"><img src ='upload/MashupExampleVertical.png' width="100%" /></div>
+
+</div> <!--class click2-->
+
+
 
 <!--
 
