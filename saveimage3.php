@@ -18,9 +18,8 @@ session_start();
 <body>
 
 <div data-role="page">
-	<div deleteImages() </div>
-	<div data-role="header">
-		<a href="mashup1.php" data-role="button" data-inline="true">Back</a>
+	<div data-role="header" data-theme = "c">
+		<a href="mashup1.php" data-role="button" data-icon = "back" data-inline="true" data-theme = "c">Back</a>
 		<h1>Save</h1>
 	</div><!-- /header -->
 
@@ -44,11 +43,11 @@ copy("images/$_SESSION[id].v3.jpg", "images/$_SESSION[id].$date.jpg");
 
 ?>
 <input type="hidden" name="urltoimage" value="images/<?php
-echo $_SESSION[id];?>.<?php echo $date;?>.jpg" />
+echo $_SESSION['id'];?>.<?php echo $date;?>.jpg" />
 
                  <input id="submit" type="submit" value="Save"/><br />
                  </form>
-<img width="100%" src='images/<?php 
+<img width="90%" src='images/<?php 
 				echo $_SESSION['id'];
 				?>.v3.jpg' />
 </div><!-- /content -->

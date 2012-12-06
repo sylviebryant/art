@@ -9,17 +9,38 @@ session_start();
 <html> 
 <head> 
 	<title>Mashup</title> 	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+
+<!-- PreLoad Wait - Script -->
+<!-- This script and more from http://www.rainbow.arch.scriptmania.com 
+
+function waitPreloadPage() { //DOM
+if (document.getElementById){
+document.getElementById('prepage').style.visibility='hidden';
+}else{
+if (document.layers){ //NS4
+document.prepage.visibility = 'hidden';
+}
+else { //IE4
+document.all.prepage.style.visibility = 'hidden';
+}
+}
+}
+// End -->
+</SCRIPT>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	
 </head> 
 
-<body> 
+<body onLoad="waitPreloadPage();"> 
 <div data-role="page">
 
-	<div data-role= "header">
-		<a href = "photopreview.php" data-role = "button" data-theme = "a"> Back </a>
+	<div data-role= "header" data-theme ="c">
+		<a href = "photopreview.php" data-role = "button" data-theme = "c"> Back </a>
 		<h1>Mashups</h1>
 		<a href = "mashup.php" data-role = "button" data-theme="b" rel = "external"> Remash</a>
 
@@ -40,12 +61,12 @@ else {
 }
 //version1
 
- $p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v1bottom.jpg');
+ $p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v1bottom.jpg');
  $p->darken(30);
  $p->contrast();
  
- $p = new phmagick($image1, 'upload/'.$_SESSION['id'].'.v1top.jpg'); 
- $p->rotate(rand(150, 210));
+ $p = new phmagick($image2, 'upload/'.$_SESSION['id'].'.v1top.jpg'); 
+ //$p->rotate(rand(150, 210));
  $p->smooth();
  $times = rand (1, 3);
  for ($i = 0; $i < $times; $i++){
@@ -133,4 +154,5 @@ $phMagick->watermark('upload/'.$_SESSION['id'].'.v4top.jpg', phMagickGravity::Ce
 </div>
 </div>
 </body>
+
 </html>

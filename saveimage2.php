@@ -18,10 +18,10 @@ session_start();
 <body>
 
 <div data-role="page">
-	<div deleteImages() </div>
-	<div data-role="header">
-		<a href="mashup1.php" data-role="button" data-inline="true">Back</a>
-		<h1>Save</h1>
+	<div data-role="header" data-theme = "c">
+		<a href="mashup1.php" data-role="button" data-icon = "back" data-theme = "c" data-inline="true">Back</a>
+		<h1></h1>
+
 	</div><!-- /header -->
 
 		<FORM action="save.php" rel="external" method="post">
@@ -35,9 +35,6 @@ $date = (string)strtotime("now");
 $_SESSION['date'] = $date;
 copy("images/$_SESSION[id].v2.jpg", "images/$_SESSION[id].$date.jpg");
 
-//save it as final image
-//copy("images/$_SESSION[id].v2.jpg", "images/$_SESSION[id].final.jpg");
-
 
 ?>
 <input type="hidden" name="urltoimage" value="images/<?php
@@ -47,8 +44,10 @@ echo $_SESSION['id'];?>.<?php echo $date;?>.jpg" />
 
                  <input id="submit" type="submit" value="Save"/><br />
                  </form>
-<img width="100%" src='images/<?php
+<div class = "content">
+<input type = "image" img width="90%" src='images/<?php
 		echo $_SESSION['id']?>.v2.jpg' />
+		</div>
 </div><!-- /content -->
 		</div><!-- /page -->
 

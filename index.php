@@ -8,66 +8,90 @@ session_start();
 <!DOCTYPE html> 
 <html> 
 <head>
-	<script src="//cdn.optimizely.com/js/139610984.js"></script>
 	<title>Mash Photato</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<link rel="stylesheet" href="style.css" />
+	<script src="js/script.js"></script>
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36373072-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head> 
 <body>
 
 <div data-role="page">
 
-<style>
-  .ui-page { background-image:url('upload/pyramid_background_black3.png'); background-opacity:0.45}
-</style>
-
-<!--	<div data-role="header" data-position="inline" vertical-align="middle"> -->
-	
-
-		<a href="logout.php" data-role="button" data-inline="true" data-mini="true" data-theme="a">Log out</a>
-	
-<!--	<div class="ui-bar">  --> 
+ <div data-role="header" data-theme = "c">
+	<input type="button" class = "logout" data-theme = "c" value="Log Out" inline = "true" onclick="window.location = 'logout.php'" />
+	</div><!-- /header -->
 
 	
+
+
+
+	<div data-role="content">	
 	 <div align = "center">
-		<!-- <h1 align="middle">Mash Photato</h1> --> 
-		<img src = "upload/Mash-Photato-Icon.png" height="60" width="60" img style="float:middle" align="middle"/>
+		
+		<img src = "buttons/StartMashingButton.png" width="100" img style="float:middle" align="middle"/>
 </div>
+
 	
-	<!-- <span class="ui-title"  -->
-<!--	</div>  /ui-bar-->
-<!--	</div>   /header -->
-	
-	<div data-role="content">
-	
-	<font color="#FFFFFF">
-<?php
-	echo "<p><b> Hi ".$_SESSION['id'].",</b></p>";
+
+
+		
+		<?php
+			include("config2.php");
+			$id = $_SESSION['id'];
+			$query = "SELECT * FROM gallery WHERE username = '$id'";
+		$result = mysql_query($query);
+		$row = mysql_fetch_assoc($result);
+		if (!$row)
+		{
+			echo "<p><b> Hi ".$_SESSION['id'].",</b></p>";
+			echo "<div class = 'space'></div>";
+			echo "<h3 style='text-align:center;'>Start your journey HERE!</h3>";
+			echo "<div class = 'img' style='text-align:center;'><img src = 'arrow.jpg' width = '100' /></div>";
+		}
+		else {
+			echo "<p> Hi ".$_SESSION['id'].", here's your Gallery</p>";
+			$a = 1;
+			while ($row = mysql_fetch_assoc($result)) {
+			$_SESSION['index'] = $a;
+			$item = (string)$a;
+			$ditem  = "d".$item;
+			$fitem = "f".$item;
+        	echo "<tr><h4>".$row["title"]."</h4></tr>";
+			echo "<a href='#$item' data-rel='popup'><input type = 'image' img width='500' style='max-width:95%;border:6px double #545565;' class='pretty' src='".$row["image"]."' /></a>"; 
+			$_SESSION['item'] = $row["image"];
+			//echo " <div class  = 'buttons'>";
+			echo "<a href='#$ditem' data-rel= 'popup' ><img src = 'delete_icon.jpg' width = '30' align = 'right'/></a>";
+			//echo  "<a class = 'facebook' id = '".$row["image"]."' data-rel= 'dialog' data-inline= 'true'><img src = 'facebook_icon.jpg' width = '50' /></a></div>";		
+			//echo "<div data-role= 'popup' id='$item'><input type = 'image' img width='280' style='max-width:95%;border:6px double #545565;' class='pretty' src= '".$row["image"]."' /></div>";
+			echo "<div data-role= 'popup' id='$ditem'><input type = 'image' img width='280' style='max-width:95%;border:6px double #545565;' class='pretty' src= '".$row["image"]."' /><p> Are You SURE you want to delete the photo? </p><a href ='index.php' data-inline = 'true'  data-icon='back' data-role = 'button' >Cancel</a><a data-role = 'button' data-inline = 'true' data-icon = 'delete' data-theme = 'b' class = 'delete' id = '".$row["image"]."' >Delete</a></div>";
+			echo "<div class = 'space'></div>";
+			++$a;
+        }
+		}
 ?>
-</font>
+		
+		<script>
+					//put it outside while loop
+		$(".delete").click(function() {
+			var id = $(this).attr("id");
+			$.ajax({
+				type: "POST",
+				url: "delete.php",
+				data: { photoid: id }
+				}).done(function( ) {
+				window.location = "index.php";
+			});
+			});
+		
+  
+		
+					</script>
+					
 
-		<p><b><font color="#FFFFFF">Welcome to Mash Photato, the only app that takes your two photos to create an artful mashup!</font></b></p>		
-		<!-- <div class="image"><img src ='upload/MashupExample.png' width="100%" /></div> -->
-
-	 <a href="takephoto1.php" data-role="button" data-theme="b">Create</a> 
-	 <a href="gallery.php" data-role="button">Gallery</a> 
-		<div class="image"><img src ='upload/MashupExampleVertical.png' width="100%" /></div>
 
 	</div><!-- /content -->
 
