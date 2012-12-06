@@ -54,6 +54,8 @@ session_start();
 		else {
 			echo "<p> Hi ".$_SESSION['id'].", here's your Gallery</p>";
 			$a = 1;
+			$query = "SELECT * FROM gallery WHERE username = '$id'";
+			$result = mysql_query($query);
 			while ($row = mysql_fetch_assoc($result)) {
 			$_SESSION['index'] = $a;
 			$item = (string)$a;
