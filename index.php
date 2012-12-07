@@ -15,8 +15,11 @@ session_start();
 	<script src="js/script.js"></script>
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	
+</head>
 
-</head> 
+
+
 <body>
 
 <div data-role="page">
@@ -24,10 +27,6 @@ session_start();
  <div data-role="header" data-theme = "c">
 	<input type="button" class = "logout" data-theme = "c" value="Log Out" inline = "true" onclick="window.location = 'logout.php'" />
 	</div><!-- /header -->
-
-	
-
-
 
 	<div data-role="content">	
 	 <div align = "center">
@@ -49,6 +48,7 @@ session_start();
 		{
 			echo "<p><b> Hi ".$_SESSION['id'].",</b></p>";
 			echo "<div class = 'space'></div>";
+			echo "<div class = 'img' style='text-align:center;'><img src = 'arrow_up.png' width = '40' /></div>";
 			echo "<h3 style='text-align:center;'>Start your journey HERE!</h3>";
 		}
 		else {

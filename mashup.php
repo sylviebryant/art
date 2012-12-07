@@ -9,34 +9,23 @@ session_start();
 <html> 
 <head> 
 	<title>Mashup</title> 	
-	
-	<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
-
-<!-- PreLoad Wait - Script -->
-<!-- This script and more from http://www.rainbow.arch.scriptmania.com 
-
-function waitPreloadPage() { //DOM
-if (document.getElementById){
-document.getElementById('prepage').style.visibility='hidden';
-}else{
-if (document.layers){ //NS4
-document.prepage.visibility = 'hidden';
-}
-else { //IE4
-document.all.prepage.style.visibility = 'hidden';
-}
-}
-}
-// End -->
-</SCRIPT>
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	
+	<style media="screen" type="text/css">
+
+	.ui-page
+	{
+   background: transparent url(upload/TiledPotatoBkgdTransparent.png) repeat center center;
+	}
+
+	</style>
+	
 </head> 
 
-<body onLoad="waitPreloadPage();"> 
+<body> 
 <div data-role="page">
 
 	<div data-role= "header" data-theme ="c">

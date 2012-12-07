@@ -3,5 +3,11 @@
     display:inline-block;
 }
 
+.subdiv{
+height: 60px;
+}
 
-
+.ui-page
+{
+   background: transparent url(upload/TiledPotatoBkgdTransparent.png) repeat center center;
+}

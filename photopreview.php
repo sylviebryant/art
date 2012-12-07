@@ -13,10 +13,19 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<link rel="stylesheet" href="style.css" />
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/scriptchg1.js"></script>
 	<script src="js/scriptchg2.js"></script>
 
+	<!--<style media="screen" type="text/css">
+
+	.ui-page
+	{
+   background: transparent url(upload/TiledPotatoBkgdTransparent.png) repeat center center;
+	}
+
+	</style>-->
 
 </head> 
 <body> 
